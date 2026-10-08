@@ -1,0 +1,2845 @@
+{
+ "voice": "da-DK-JeppeNeural",
+ "genereret": "2026-10-08",
+ "clips": {
+  "bil": {
+   "f": "j/44f93fc95c80.mp3",
+   "v": "b2486acc",
+   "d": 0.51,
+   "s": [
+    [
+     0.04,
+     0.37
+    ]
+   ]
+  },
+  "bip kan ikke huske, hvad der kommer efter ni. skriv nu på tavlen, kaptajn!": {
+   "f": "j/8e1556c607b8.mp3",
+   "v": "54861b39",
+   "d": 5.73,
+   "s": [
+    [
+     0.03,
+     1.13
+    ],
+    [
+     1.4,
+     2.57
+    ],
+    [
+     3.63,
+     4.78
+    ],
+    [
+     5.04,
+     5.6
+    ]
+   ]
+  },
+  "byg ordet": {
+   "f": "j/01b288f73ab7.mp3",
+   "v": "c537b472",
+   "d": 0.91,
+   "s": [
+    [
+     0.04,
+     0.78
+    ]
+   ]
+  },
+  "da": {
+   "f": "j/2ba9287e840f.mp3",
+   "v": "5395b186",
+   "d": 0.28,
+   "s": [
+    [
+     0.04,
+     0.16
+    ]
+   ]
+  },
+  "da lo fut.": {
+   "f": "j/94d9ab01b450.mp3",
+   "v": "15c322a2",
+   "d": 1.06,
+   "s": [
+    [
+     0.03,
+     0.92
+    ]
+   ]
+  },
+  "det her er dino. han er lille og tyk og grøn, men inde i sit eget hoved er han den største i hele dalen. nede ved søen har han fundet noget under et stort blad, og nu skal hele dalen vide, hvis det er:": {
+   "f": "j/7fec67f26b78.mp3",
+   "v": "8f45cb58",
+   "d": 13.44,
+   "s": [
+    [
+     0.03,
+     0.97
+    ],
+    [
+     2.09,
+     3.44
+    ],
+    [
+     3.71,
+     6.88
+    ],
+    [
+     8.03,
+     10.7
+    ],
+    [
+     11.03,
+     12.49
+    ],
+    [
+     12.75,
+     13.3
+    ]
+   ]
+  },
+  "det her er omklædningsrummet. tryk på et skab.": {
+   "f": "j/349c8db029b3.mp3",
+   "v": "2ffdb378",
+   "d": 3.91,
+   "s": [
+    [
+     0.04,
+     1.77
+    ],
+    [
+     2.88,
+     3.7
+    ]
+   ]
+  },
+  "det her ord driller. h sover. det siger: uh.": {
+   "f": "j/f6f01338d576.mp3",
+   "v": "3dfadc9c",
+   "d": 5.24,
+   "s": [
+    [
+     0.03,
+     1.05
+    ],
+    [
+     2.19,
+     2.41
+    ],
+    [
+     2.54,
+     3.0
+    ],
+    [
+     4.14,
+     4.66
+    ],
+    [
+     4.89,
+     5.1
+    ]
+   ]
+  },
+  "det her ord driller. o siger å, og g sover. det siger: og.": {
+   "f": "j/cb877fdcba67.mp3",
+   "v": "45cde707",
+   "d": 6.51,
+   "s": [
+    [
+     0.03,
+     1.06
+    ],
+    [
+     2.13,
+     2.3
+    ],
+    [
+     2.48,
+     3.12
+    ],
+    [
+     3.44,
+     4.35
+    ],
+    [
+     5.41,
+     5.93
+    ],
+    [
+     6.19,
+     6.38
+    ]
+   ]
+  },
+  "det store gab kom tættere og tættere på dinos plettede skat. dinos knæ rystede, men han stillede sig foran med benene spredt og råbte, så højt han kunne:": {
+   "f": "j/22168deb3234.mp3",
+   "v": "7ae25b33",
+   "d": 9.69,
+   "s": [
+    [
+     0.04,
+     3.3
+    ],
+    [
+     4.38,
+     5.52
+    ],
+    [
+     5.72,
+     8.44
+    ],
+    [
+     8.7,
+     9.57
+    ]
+   ]
+  },
+  "dino": {
+   "f": "j/4037615c0e66.mp3",
+   "v": "fa6df8ee",
+   "d": 0.55,
+   "s": [
+    [
+     0.04,
+     0.42
+    ]
+   ]
+  },
+  "dino lagde sig tæt ind til sit fund og sang en lille morgensang for det. midt i sangen blev der pludselig helt stille i dalen. dino åbnede det ene øje og kiggede forvirret rundt:": {
+   "f": "j/1df1266bbe08.mp3",
+   "v": "0633950e",
+   "d": 11.68,
+   "s": [
+    [
+     0.04,
+     0.85
+    ],
+    [
+     1.0,
+     1.81
+    ],
+    [
+     1.95,
+     3.67
+    ],
+    [
+     4.76,
+     7.37
+    ],
+    [
+     8.53,
+     11.55
+    ]
+   ]
+  },
+  "dino rystede ikke længere. han stillede sig ved siden af sin nye, lille ven og stampede i jorden, så det sagde bum - i hvert fald inde i hans eget hoved. så pegede han på kæmpen og råbte:": {
+   "f": "j/d6a5d13c3843.mp3",
+   "v": "5e273ffd",
+   "d": 12.7,
+   "s": [
+    [
+     0.03,
+     1.64
+    ],
+    [
+     2.76,
+     4.44
+    ],
+    [
+     4.69,
+     6.42
+    ],
+    [
+     6.69,
+     7.53
+    ],
+    [
+     7.66,
+     9.54
+    ],
+    [
+     10.62,
+     12.57
+    ]
+   ]
+  },
+  "dino skubbede og skubbede til det store hoved, men det rørte sig ikke en millimeter. inde fra skallen kom en lille, glad lyd. så bøjede dino halsen helt ned til kæmpens øre og hviskede:": {
+   "f": "j/dadb00f43a9e.mp3",
+   "v": "81e726cb",
+   "d": 12.74,
+   "s": [
+    [
+     0.04,
+     2.32
+    ],
+    [
+     2.56,
+     4.49
+    ],
+    [
+     5.58,
+     7.18
+    ],
+    [
+     7.43,
+     8.0
+    ],
+    [
+     9.09,
+     12.59
+    ]
+   ]
+  },
+  "dit": {
+   "f": "j/10139c95e00a.mp3",
+   "v": "10722b80",
+   "d": 0.4,
+   "s": [
+    [
+     0.04,
+     0.27
+    ]
+   ]
+  },
+  "dit skilt stod i sandet, og det raslede i bregnerne. kæmpen stoppede midt i sit gab og stirrede ned ved siden af dino. så hvinede han med en stemme som en bitte, bitte lille tuba:": {
+   "f": "j/2f71c66d7dc8.mp3",
+   "v": "851a0882",
+   "d": 11.85,
+   "s": [
+    [
+     0.03,
+     1.26
+    ],
+    [
+     1.51,
+     2.97
+    ],
+    [
+     4.06,
+     5.58
+    ],
+    [
+     5.75,
+     7.38
+    ],
+    [
+     8.45,
+     10.45
+    ],
+    [
+     10.7,
+     11.71
+    ]
+   ]
+  },
+  "fido": {
+   "f": "j/b8c228c7a160.mp3",
+   "v": "1118ab3a",
+   "d": 0.74,
+   "s": [
+    [
+     0.04,
+     0.61
+    ]
+   ]
+  },
+  "find bogstavet, der hedder a. tryk på det.": {
+   "f": "j/f7c652e2ba58.mp3",
+   "v": "0ca5c5f2",
+   "d": 3.71,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.83
+    ],
+    [
+     2.92,
+     3.59
+    ]
+   ]
+  },
+  "find bogstavet, der hedder be. tryk på det.": {
+   "f": "j/fd1dcccaf706.mp3",
+   "v": "a93e2315",
+   "d": 3.73,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.82
+    ],
+    [
+     2.94,
+     3.6
+    ]
+   ]
+  },
+  "find bogstavet, der hedder de. tryk på det.": {
+   "f": "j/a3b1b3bfca8e.mp3",
+   "v": "91c130a9",
+   "d": 3.72,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.82
+    ],
+    [
+     2.94,
+     3.6
+    ]
+   ]
+  },
+  "find bogstavet, der hedder dobbelt-ve. tryk på det.": {
+   "f": "j/b17e5f6165d2.mp3",
+   "v": "04c25884",
+   "d": 4.07,
+   "s": [
+    [
+     0.05,
+     0.99
+    ],
+    [
+     1.23,
+     2.17
+    ],
+    [
+     3.28,
+     3.94
+    ]
+   ]
+  },
+  "find bogstavet, der hedder e. tryk på det.": {
+   "f": "j/259bbe26bc87.mp3",
+   "v": "e2a1bf02",
+   "d": 3.66,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.21,
+     1.78
+    ],
+    [
+     2.87,
+     3.53
+    ]
+   ]
+  },
+  "find bogstavet, der hedder ef. tryk på det.": {
+   "f": "j/f37d42a65296.mp3",
+   "v": "b11b19a3",
+   "d": 3.76,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.21,
+     1.92
+    ],
+    [
+     2.98,
+     3.64
+    ]
+   ]
+  },
+  "find bogstavet, der hedder eks. tryk på det.": {
+   "f": "j/6dd2eebf2a73.mp3",
+   "v": "b416b4f5",
+   "d": 3.88,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.21,
+     2.04
+    ],
+    [
+     3.1,
+     3.76
+    ]
+   ]
+  },
+  "find bogstavet, der hedder el. tryk på det.": {
+   "f": "j/23e3cd907099.mp3",
+   "v": "2199356b",
+   "d": 3.73,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.21,
+     1.89
+    ],
+    [
+     2.94,
+     3.6
+    ]
+   ]
+  },
+  "find bogstavet, der hedder em. tryk på det.": {
+   "f": "j/9d7fea21a3e5.mp3",
+   "v": "9b425be7",
+   "d": 3.7,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.21,
+     1.88
+    ],
+    [
+     2.91,
+     3.57
+    ]
+   ]
+  },
+  "find bogstavet, der hedder en. tryk på det.": {
+   "f": "j/560a90efddda.mp3",
+   "v": "73143d77",
+   "d": 3.69,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.21,
+     1.86
+    ],
+    [
+     2.9,
+     3.56
+    ]
+   ]
+  },
+  "find bogstavet, der hedder er. tryk på det.": {
+   "f": "j/dea0fe56ba47.mp3",
+   "v": "e114cf62",
+   "d": 3.7,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.21,
+     1.87
+    ],
+    [
+     2.91,
+     3.57
+    ]
+   ]
+  },
+  "find bogstavet, der hedder es. tryk på det.": {
+   "f": "j/d8ebee7a9505.mp3",
+   "v": "8b08d562",
+   "d": 3.79,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.21,
+     1.96
+    ],
+    [
+     3.0,
+     3.66
+    ]
+   ]
+  },
+  "find bogstavet, der hedder ge. tryk på det.": {
+   "f": "j/2af7fe32db8b.mp3",
+   "v": "79f9bf03",
+   "d": 3.74,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.84
+    ],
+    [
+     2.95,
+     3.61
+    ]
+   ]
+  },
+  "find bogstavet, der hedder hå. tryk på det.": {
+   "f": "j/5ebee21ec957.mp3",
+   "v": "d8e55f5d",
+   "d": 3.75,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.22,
+     1.82
+    ],
+    [
+     2.97,
+     3.62
+    ]
+   ]
+  },
+  "find bogstavet, der hedder i. tryk på det.": {
+   "f": "j/0ae1dec9aa50.mp3",
+   "v": "0c7cba5a",
+   "d": 3.65,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.21,
+     1.78
+    ],
+    [
+     2.86,
+     3.52
+    ]
+   ]
+  },
+  "find bogstavet, der hedder jod. tryk på det.": {
+   "f": "j/ccfe42d1dc9e.mp3",
+   "v": "3a617ed2",
+   "d": 3.77,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.21,
+     1.87
+    ],
+    [
+     2.98,
+     3.64
+    ]
+   ]
+  },
+  "find bogstavet, der hedder ku. tryk på det.": {
+   "f": "j/9ad3c2acca5b.mp3",
+   "v": "61084ff6",
+   "d": 3.79,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.85
+    ],
+    [
+     3.01,
+     3.66
+    ]
+   ]
+  },
+  "find bogstavet, der hedder kå. tryk på det.": {
+   "f": "j/6ceecf5bf6b5.mp3",
+   "v": "3a5eed57",
+   "d": 3.78,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.23,
+     1.87
+    ],
+    [
+     2.99,
+     3.65
+    ]
+   ]
+  },
+  "find bogstavet, der hedder o. tryk på det.": {
+   "f": "j/8c74c8ff859c.mp3",
+   "v": "6e0e011a",
+   "d": 3.69,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.21,
+     1.8
+    ],
+    [
+     2.9,
+     3.56
+    ]
+   ]
+  },
+  "find bogstavet, der hedder pe. tryk på det.": {
+   "f": "j/00237fc126d5.mp3",
+   "v": "d624b79b",
+   "d": 3.78,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.23,
+     1.85
+    ],
+    [
+     2.99,
+     3.65
+    ]
+   ]
+  },
+  "find bogstavet, der hedder se. tryk på det.": {
+   "f": "j/d8627089f6f2.mp3",
+   "v": "9ea8b163",
+   "d": 3.77,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.85
+    ],
+    [
+     2.98,
+     3.64
+    ]
+   ]
+  },
+  "find bogstavet, der hedder set. tryk på det.": {
+   "f": "j/657fa4fa5d8e.mp3",
+   "v": "a114d5c9",
+   "d": 3.82,
+   "s": [
+    [
+     0.05,
+     1.0
+    ],
+    [
+     1.24,
+     1.93
+    ],
+    [
+     3.03,
+     3.69
+    ]
+   ]
+  },
+  "find bogstavet, der hedder te. tryk på det.": {
+   "f": "j/3b471880b152.mp3",
+   "v": "1dea255d",
+   "d": 3.79,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.21,
+     1.87
+    ],
+    [
+     3.0,
+     3.67
+    ]
+   ]
+  },
+  "find bogstavet, der hedder u. tryk på det.": {
+   "f": "j/45d06bfc468c.mp3",
+   "v": "a55f42c7",
+   "d": 3.67,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.22,
+     1.77
+    ],
+    [
+     2.89,
+     3.55
+    ]
+   ]
+  },
+  "find bogstavet, der hedder ve. tryk på det.": {
+   "f": "j/d8007a65a4b3.mp3",
+   "v": "55d1a94b",
+   "d": 3.71,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.82
+    ],
+    [
+     2.93,
+     3.59
+    ]
+   ]
+  },
+  "find bogstavet, der hedder y. tryk på det.": {
+   "f": "j/cefb55abda8f.mp3",
+   "v": "0d5b6d2e",
+   "d": 3.68,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.22,
+     1.81
+    ],
+    [
+     2.9,
+     3.56
+    ]
+   ]
+  },
+  "find bogstavet, der hedder å. tryk på det.": {
+   "f": "j/1e9a64b590e5.mp3",
+   "v": "c37a1320",
+   "d": 3.73,
+   "s": [
+    [
+     0.05,
+     0.97
+    ],
+    [
+     1.21,
+     1.85
+    ],
+    [
+     2.94,
+     3.61
+    ]
+   ]
+  },
+  "find bogstavet, der hedder æ. tryk på det.": {
+   "f": "j/dee9dcdde95b.mp3",
+   "v": "efaf43d1",
+   "d": 3.7,
+   "s": [
+    [
+     0.04,
+     0.97
+    ],
+    [
+     1.22,
+     1.82
+    ],
+    [
+     2.91,
+     3.57
+    ]
+   ]
+  },
+  "find bogstavet, der hedder ø. tryk på det.": {
+   "f": "j/f0754779b34d.mp3",
+   "v": "a7e3b8b4",
+   "d": 3.67,
+   "s": [
+    [
+     0.04,
+     0.98
+    ],
+    [
+     1.23,
+     1.8
+    ],
+    [
+     2.89,
+     3.55
+    ]
+   ]
+  },
+  "fint!": {
+   "f": "j/a04cf7b66886.mp3",
+   "v": "0d530245",
+   "d": 0.65,
+   "s": [
+    [
+     0.04,
+     0.52
+    ]
+   ]
+  },
+  "fut": {
+   "f": "j/74cda819e7a1.mp3",
+   "v": "344a058c",
+   "d": 0.54,
+   "s": [
+    [
+     0.05,
+     0.42
+    ]
+   ]
+  },
+  "først varmer vi op, kaptajn. tryk på knappen.": {
+   "f": "j/40100bca4dde.mp3",
+   "v": "d77b7d85",
+   "d": 4.02,
+   "s": [
+    [
+     0.05,
+     1.04
+    ],
+    [
+     1.41,
+     1.94
+    ],
+    [
+     3.02,
+     3.9
+    ]
+   ]
+  },
+  "gab": {
+   "f": "j/cf83d8687037.mp3",
+   "v": "e54d9ed9",
+   "d": 0.46,
+   "s": [
+    [
+     0.03,
+     0.25
+    ]
+   ]
+  },
+  "garn": {
+   "f": "j/5a5f6c99c0a7.mp3",
+   "v": "7243b3f1",
+   "d": 0.47,
+   "s": [
+    [
+     0.04,
+     0.35
+    ]
+   ]
+  },
+  "glas": {
+   "f": "j/c52f55888835.mp3",
+   "v": "e015338d",
+   "d": 0.61,
+   "s": [
+    [
+     0.03,
+     0.46
+    ]
+   ]
+  },
+  "godt læst, kaptajn! kaptajnens opgave: skriv nu på en seddel, og læg den på gulvet. tæl ned fra ti sammen med en voksen, og hop op på sedlen, når i kommer til nu.": {
+   "f": "j/6ab4df9607f3.mp3",
+   "v": "bfa50f37",
+   "d": 12.29,
+   "s": [
+    [
+     0.03,
+     0.68
+    ],
+    [
+     0.98,
+     1.53
+    ],
+    [
+     2.57,
+     3.82
+    ],
+    [
+     4.1,
+     5.25
+    ],
+    [
+     5.52,
+     6.51
+    ],
+    [
+     7.57,
+     9.48
+    ],
+    [
+     9.87,
+     10.99
+    ],
+    [
+     11.25,
+     12.16
+    ]
+   ]
+  },
+  "godt læst, kaptajn! kaptajnens opgave: tegn tobis støvle, der flyver som en ufo, og skriv løb under.": {
+   "f": "j/cd55a03618f3.mp3",
+   "v": "32fca0e0",
+   "d": 8.13,
+   "s": [
+    [
+     0.03,
+     0.69
+    ],
+    [
+     0.98,
+     1.54
+    ],
+    [
+     2.57,
+     3.79
+    ],
+    [
+     4.09,
+     5.26
+    ],
+    [
+     5.51,
+     6.66
+    ],
+    [
+     6.98,
+     8.0
+    ]
+   ]
+  },
+  "godt læst, kaptajn! kaptajnens opgave: tegn tuba, der sover med ægget som pude, og tegn musen på hans næse. skriv mus under.": {
+   "f": "j/f20b3c5fe93a.mp3",
+   "v": "06182afc",
+   "d": 10.88,
+   "s": [
+    [
+     0.03,
+     0.68
+    ],
+    [
+     0.98,
+     1.52
+    ],
+    [
+     2.55,
+     3.8
+    ],
+    [
+     4.09,
+     4.84
+    ],
+    [
+     5.1,
+     6.64
+    ],
+    [
+     6.89,
+     8.57
+    ],
+    [
+     9.65,
+     10.73
+    ]
+   ]
+  },
+  "godt, kaptajn!": {
+   "f": "j/98150e8466f4.mp3",
+   "v": "ee6fbfae",
+   "d": 1.3,
+   "s": [
+    [
+     0.03,
+     0.27
+    ],
+    [
+     0.59,
+     1.18
+    ]
+   ]
+  },
+  "hent en voksen. den voksne holder fingeren på hånden.": {
+   "f": "j/0513a1d2b73a.mp3",
+   "v": "ec30f34f",
+   "d": 4.13,
+   "s": [
+    [
+     0.04,
+     0.93
+    ],
+    [
+     1.99,
+     3.99
+    ]
+   ]
+  },
+  "hvad hører du først?": {
+   "f": "j/d65cb6c6d6e4.mp3",
+   "v": "6b5bf3e2",
+   "d": 1.19,
+   "s": [
+    [
+     0.03,
+     1.06
+    ]
+   ]
+  },
+  "hvad hører du så?": {
+   "f": "j/9d2a73f3258d.mp3",
+   "v": "668ae66f",
+   "d": 1.09,
+   "s": [
+    [
+     0.03,
+     0.97
+    ]
+   ]
+  },
+  "hvem er med i dag?": {
+   "f": "j/cb300efe8a47.mp3",
+   "v": "a625bb78",
+   "d": 1.17,
+   "s": [
+    [
+     0.03,
+     1.05
+    ]
+   ]
+  },
+  "hvilken historie vil du læse? tryk på den.": {
+   "f": "j/c4b513040f08.mp3",
+   "v": "b6af57b2",
+   "d": 3.48,
+   "s": [
+    [
+     0.03,
+     1.57
+    ],
+    [
+     2.61,
+     3.31
+    ]
+   ]
+  },
+  "hvilken lyd siger den?": {
+   "f": "j/202f429d9495.mp3",
+   "v": "7c29dac9",
+   "d": 1.35,
+   "s": [
+    [
+     0.03,
+     1.23
+    ]
+   ]
+  },
+  "hvilket billede passer? tryk på det.": {
+   "f": "j/c819b9c57f19.mp3",
+   "v": "eb32d253",
+   "d": 3.14,
+   "s": [
+    [
+     0.03,
+     1.29
+    ],
+    [
+     2.36,
+     3.01
+    ]
+   ]
+  },
+  "hvilket billede starter med den lyd? tryk på det.": {
+   "f": "j/0edfdafd95a7.mp3",
+   "v": "d944a7d2",
+   "d": 3.79,
+   "s": [
+    [
+     0.03,
+     1.91
+    ],
+    [
+     3.0,
+     3.67
+    ]
+   ]
+  },
+  "hvilket bogstav siger den? tryk på det.": {
+   "f": "j/d413bb094fd0.mp3",
+   "v": "f620cb54",
+   "d": 3.24,
+   "s": [
+    [
+     0.04,
+     1.42
+    ],
+    [
+     2.46,
+     3.11
+    ]
+   ]
+  },
+  "hvor vil du hen i dag, kaptajn?": {
+   "f": "j/4a79056e6e61.mp3",
+   "v": "c6f521d5",
+   "d": 2.04,
+   "s": [
+    [
+     0.04,
+     1.06
+    ],
+    [
+     1.33,
+     1.92
+    ]
+   ]
+  },
+  "hør igen:": {
+   "f": "j/b9d0b6528ebb.mp3",
+   "v": "430683d5",
+   "d": 0.81,
+   "s": [
+    [
+     0.05,
+     0.69
+    ]
+   ]
+  },
+  "hør på den voksne. hvilket bogstav siger lyden? tryk på det.": {
+   "f": "j/8e143786ea99.mp3",
+   "v": "c469555d",
+   "d": 5.55,
+   "s": [
+    [
+     0.05,
+     1.09
+    ],
+    [
+     2.17,
+     3.74
+    ],
+    [
+     4.78,
+     5.42
+    ]
+   ]
+  },
+  "hør:": {
+   "f": "j/44494dcd9274.mp3",
+   "v": "038ed17f",
+   "d": 0.47,
+   "s": [
+    [
+     0.05,
+     0.35
+    ]
+   ]
+  },
+  "ib": {
+   "f": "j/b60ca80f5fa8.mp3",
+   "v": "b6576c97",
+   "d": 0.32,
+   "s": [
+    [
+     0.04,
+     0.18
+    ]
+   ]
+  },
+  "is": {
+   "f": "j/7e31d164dadf.mp3",
+   "v": "fa0d0aac",
+   "d": 0.68,
+   "s": [
+    [
+     0.04,
+     0.55
+    ]
+   ]
+  },
+  "is. fint!": {
+   "f": "j/eed9b2c4d393.mp3",
+   "v": "3f15a3c8",
+   "d": 2.19,
+   "s": [
+    [
+     0.03,
+     0.5
+    ],
+    [
+     1.58,
+     2.04
+    ]
+   ]
+  },
+  "is. godt, kaptajn!": {
+   "f": "j/2d0774cbe721.mp3",
+   "v": "144ca9ab",
+   "d": 2.79,
+   "s": [
+    [
+     0.03,
+     0.51
+    ],
+    [
+     1.54,
+     1.76
+    ],
+    [
+     2.08,
+     2.66
+    ]
+   ]
+  },
+  "is. ja!": {
+   "f": "j/05c682b49071.mp3",
+   "v": "a71fb1cd",
+   "d": 1.96,
+   "s": [
+    [
+     0.03,
+     0.5
+    ],
+    [
+     1.56,
+     1.83
+    ]
+   ]
+  },
+  "is. sådan!": {
+   "f": "j/dd3d5c144879.mp3",
+   "v": "c4bd1286",
+   "d": 2.33,
+   "s": [
+    [
+     0.02,
+     0.5
+    ],
+    [
+     1.55,
+     2.2
+    ]
+   ]
+  },
+  "ja!": {
+   "f": "j/bda872ad54d0.mp3",
+   "v": "2da7cdfb",
+   "d": 0.42,
+   "s": [
+    [
+     0.03,
+     0.3
+    ]
+   ]
+  },
+  "kampen mod sælerne står helt stille. skriv løb på tavlen, kaptajn!": {
+   "f": "j/2b09ecfa81cf.mp3",
+   "v": "74751abc",
+   "d": 5.5,
+   "s": [
+    [
+     0.03,
+     2.22
+    ],
+    [
+     3.3,
+     4.54
+    ],
+    [
+     4.81,
+     5.37
+    ]
+   ]
+  },
+  "kæmpen kiggede ned på dem med små, tunge øjne. han strakte de bitte små arme, så langt de kunne nå - og det var ikke ret langt. så mumlede han med sin allerdybeste stemme:": {
+   "f": "j/bf959f61248f.mp3",
+   "v": "b7e5e1e0",
+   "d": 12.13,
+   "s": [
+    [
+     0.03,
+     1.96
+    ],
+    [
+     2.25,
+     2.96
+    ],
+    [
+     4.07,
+     5.73
+    ],
+    [
+     5.98,
+     7.04
+    ],
+    [
+     7.2,
+     8.41
+    ],
+    [
+     9.47,
+     10.25
+    ],
+    [
+     10.38,
+     11.99
+    ]
+   ]
+  },
+  "kæmpen lukkede øjnene, og hans store hoved sank langsomt ned ... og ned ... og ned. dino blev helt stiv i halsen og råbte:": {
+   "f": "j/669b0d6730fc.mp3",
+   "v": "ae325a2b",
+   "d": 6.78,
+   "s": [
+    [
+     0.03,
+     1.17
+    ],
+    [
+     1.46,
+     3.35
+    ],
+    [
+     3.48,
+     3.86
+    ],
+    [
+     3.99,
+     6.65
+    ]
+   ]
+  },
+  "lo": {
+   "f": "j/e74136a1b04d.mp3",
+   "v": "8a2a14a2",
+   "d": 0.5,
+   "s": [
+    [
+     0.04,
+     0.37
+    ]
+   ]
+  },
+  "lus": {
+   "f": "j/77cb5fcb1229.mp3",
+   "v": "2ceaaba5",
+   "d": 0.61,
+   "s": [
+    [
+     0.03,
+     0.49
+    ]
+   ]
+  },
+  "læs ordet. tryk på det billede, der passer.": {
+   "f": "j/e62d44631b58.mp3",
+   "v": "f003de79",
+   "d": 3.98,
+   "s": [
+    [
+     0.04,
+     0.91
+    ],
+    [
+     1.98,
+     2.99
+    ],
+    [
+     3.24,
+     3.85
+    ]
+   ]
+  },
+  "læs selv.": {
+   "f": "j/f8ea356666c6.mp3",
+   "v": "71dffe63",
+   "d": 0.88,
+   "s": [
+    [
+     0.03,
+     0.74
+    ]
+   ]
+  },
+  "læs, kaptajn.": {
+   "f": "j/ff720adf20e0.mp3",
+   "v": "0dbf0329",
+   "d": 1.48,
+   "s": [
+    [
+     0.03,
+     0.52
+    ],
+    [
+     0.78,
+     1.34
+    ]
+   ]
+  },
+  "læs, og træk bolden under ordene.": {
+   "f": "j/4cca6d45039b.mp3",
+   "v": "7e8b13e7",
+   "d": 2.64,
+   "s": [
+    [
+     0.03,
+     0.49
+    ],
+    [
+     0.83,
+     2.51
+    ]
+   ]
+  },
+  "læs, og træk dino under ordene.": {
+   "f": "j/6ecddebd4e80.mp3",
+   "v": "b9b020c1",
+   "d": 2.5,
+   "s": [
+    [
+     0.04,
+     0.49
+    ],
+    [
+     0.82,
+     2.37
+    ]
+   ]
+  },
+  "læs, og træk fut under ordene.": {
+   "f": "j/3becb7a66040.mp3",
+   "v": "123bae6d",
+   "d": 2.4,
+   "s": [
+    [
+     0.04,
+     0.48
+    ],
+    [
+     0.79,
+     2.26
+    ]
+   ]
+  },
+  "løb": {
+   "f": "j/3584958a75f0.mp3",
+   "v": "cc9d57a5",
+   "d": 0.58,
+   "s": [
+    [
+     0.03,
+     0.37
+    ]
+   ]
+  },
+  "løb, æg! løb!": {
+   "f": "j/84d156abf19a.mp3",
+   "v": "8df78d35",
+   "d": 2.71,
+   "s": [
+    [
+     0.03,
+     0.35
+    ],
+    [
+     0.73,
+     0.96
+    ],
+    [
+     2.18,
+     2.49
+    ]
+   ]
+  },
+  "løb? nu? nat-nat, dino ...": {
+   "f": "j/66d9b2028549.mp3",
+   "v": "ff55ed26",
+   "d": 4.56,
+   "s": [
+    [
+     0.03,
+     0.37
+    ],
+    [
+     1.64,
+     1.97
+    ],
+    [
+     3.08,
+     3.72
+    ],
+    [
+     4.04,
+     4.43
+    ]
+   ]
+  },
+  "løg": {
+   "f": "j/481f1281ec83.mp3",
+   "v": "36581c3c",
+   "d": 0.52,
+   "s": [
+    [
+     0.04,
+     0.39
+    ]
+   ]
+  },
+  "løve": {
+   "f": "j/d525b01ea226.mp3",
+   "v": "64180853",
+   "d": 0.71,
+   "s": [
+    [
+     0.03,
+     0.58
+    ]
+   ]
+  },
+  "men det var ikke nat. noget kæmpestort stod lige bag dem og skyggede for solen. dino vendte sig langsomt om, kiggede op ... og op ... og op ... og råbte:": {
+   "f": "j/7bb40004fe32.mp3",
+   "v": "1ddd7d79",
+   "d": 11.55,
+   "s": [
+    [
+     0.03,
+     1.93
+    ],
+    [
+     3.02,
+     4.88
+    ],
+    [
+     5.0,
+     6.06
+    ],
+    [
+     7.23,
+     8.56
+    ],
+    [
+     8.79,
+     9.35
+    ],
+    [
+     9.78,
+     9.98
+    ],
+    [
+     10.55,
+     11.41
+    ]
+   ]
+  },
+  "min": {
+   "f": "j/484cb448098b.mp3",
+   "v": "95159207",
+   "d": 0.55,
+   "s": [
+    [
+     0.04,
+     0.42
+    ]
+   ]
+  },
+  "min ufo! min! min!": {
+   "f": "j/8f85e1c2e798.mp3",
+   "v": "0593d0da",
+   "d": 4.01,
+   "s": [
+    [
+     0.03,
+     0.85
+    ],
+    [
+     2.05,
+     2.41
+    ],
+    [
+     3.52,
+     3.89
+    ]
+   ]
+  },
+  "mit": {
+   "f": "j/831426a4c4d9.mp3",
+   "v": "0ce656e5",
+   "d": 0.54,
+   "s": [
+    [
+     0.04,
+     0.41
+    ]
+   ]
+  },
+  "mit æg! mit! mit!": {
+   "f": "j/622c6164648f.mp3",
+   "v": "9aa55dec",
+   "d": 3.91,
+   "s": [
+    [
+     0.03,
+     0.36
+    ],
+    [
+     0.48,
+     0.71
+    ],
+    [
+     1.95,
+     2.31
+    ],
+    [
+     3.43,
+     3.78
+    ]
+   ]
+  },
+  "mund": {
+   "f": "j/2ce460d36d56.mp3",
+   "v": "1ab649d0",
+   "d": 0.5,
+   "s": [
+    [
+     0.04,
+     0.38
+    ]
+   ]
+  },
+  "mur": {
+   "f": "j/abc6e2bd8fb8.mp3",
+   "v": "0f959cf6",
+   "d": 0.58,
+   "s": [
+    [
+     0.02,
+     0.45
+    ]
+   ]
+  },
+  "mus": {
+   "f": "j/0b151e98e48e.mp3",
+   "v": "38f40358",
+   "d": 0.69,
+   "s": [
+    [
+     0.04,
+     0.56
+    ]
+   ]
+  },
+  "nat": {
+   "f": "j/a958153fdb6e.mp3",
+   "v": "7f06371f",
+   "d": 0.53,
+   "s": [
+    [
+     0.03,
+     0.39
+    ]
+   ]
+  },
+  "nat-nat, tuba og mus.": {
+   "f": "j/12d012a3dedb.mp3",
+   "v": "b9fd0cbd",
+   "d": 2.27,
+   "s": [
+    [
+     0.03,
+     0.61
+    ],
+    [
+     0.9,
+     2.15
+    ]
+   ]
+  },
+  "ni": {
+   "f": "j/c7d5a346a5cd.mp3",
+   "v": "f6b10207",
+   "d": 0.5,
+   "s": [
+    [
+     0.03,
+     0.38
+    ]
+   ]
+  },
+  "ni ... ni ... ti?": {
+   "f": "j/cbd8c8c46283.mp3",
+   "v": "646d8271",
+   "d": 2.48,
+   "s": [
+    [
+     0.04,
+     0.74
+    ],
+    [
+     2.02,
+     2.34
+    ]
+   ]
+  },
+  "nu": {
+   "f": "j/098e63db9a0b.mp3",
+   "v": "1bbb5370",
+   "d": 0.48,
+   "s": [
+    [
+     0.03,
+     0.35
+    ]
+   ]
+  },
+  "nu dig! sig ordet. tryk så for at høre det.": {
+   "f": "j/4cdcc83a32c1.mp3",
+   "v": "54c7e766",
+   "d": 4.88,
+   "s": [
+    [
+     0.03,
+     0.54
+    ],
+    [
+     1.68,
+     2.47
+    ],
+    [
+     3.57,
+     4.75
+    ]
+   ]
+  },
+  "nu, fut!": {
+   "f": "j/921fca8a8a56.mp3",
+   "v": "232095d1",
+   "d": 1.21,
+   "s": [
+    [
+     0.03,
+     0.34
+    ],
+    [
+     0.64,
+     1.07
+    ]
+   ]
+  },
+  "næb": {
+   "f": "j/66424bb9410d.mp3",
+   "v": "14b60673",
+   "d": 0.57,
+   "s": [
+    [
+     0.03,
+     0.36
+    ]
+   ]
+  },
+  "næb! min ufo!": {
+   "f": "j/dda2aa185dc9.mp3",
+   "v": "cb511d34",
+   "d": 2.53,
+   "s": [
+    [
+     0.04,
+     0.37
+    ],
+    [
+     1.58,
+     2.4
+    ]
+   ]
+  },
+  "oda": {
+   "f": "j/29b95adafded.mp3",
+   "v": "459a815b",
+   "d": 0.57,
+   "s": [
+    [
+     0.04,
+     0.44
+    ]
+   ]
+  },
+  "og": {
+   "f": "j/10c24ebd2b2a.mp3",
+   "v": "82ef8e26",
+   "d": 0.37,
+   "s": [
+    [
+     0.04,
+     0.24
+    ]
+   ]
+  },
+  "og den her.": {
+   "f": "j/cebd4f81a4da.mp3",
+   "v": "3fbf55c6",
+   "d": 0.77,
+   "s": [
+    [
+     0.03,
+     0.64
+    ]
+   ]
+  },
+  "og fido?": {
+   "f": "j/aec68953af1e.mp3",
+   "v": "fb46b7b8",
+   "d": 0.79,
+   "s": [
+    [
+     0.03,
+     0.66
+    ]
+   ]
+  },
+  "prøv et andet.": {
+   "f": "j/2a10ac0eefca.mp3",
+   "v": "2fb8e13b",
+   "d": 1.09,
+   "s": [
+    [
+     0.04,
+     0.96
+    ]
+   ]
+  },
+  "prøv igen, kaptajn. tryk på dit ord på tavlen.": {
+   "f": "j/d6564d798c84.mp3",
+   "v": "b46e48cd",
+   "d": 4.21,
+   "s": [
+    [
+     0.03,
+     0.74
+    ],
+    [
+     1.0,
+     1.56
+    ],
+    [
+     2.59,
+     4.07
+    ]
+   ]
+  },
+  "se, dut har fået noget nyt.": {
+   "f": "j/2a168201d103.mp3",
+   "v": "2467bad6",
+   "d": 1.91,
+   "s": [
+    [
+     0.04,
+     0.38
+    ],
+    [
+     0.7,
+     1.78
+    ]
+   ]
+  },
+  "sig lyden højt. tryk så for at høre den.": {
+   "f": "j/54c92ba60370.mp3",
+   "v": "0b147aa9",
+   "d": 3.38,
+   "s": [
+    [
+     0.04,
+     0.93
+    ],
+    [
+     1.99,
+     3.23
+    ]
+   ]
+  },
+  "sig ordene højt, kaptajn - så vågner billedet.": {
+   "f": "j/3f06c6ad1ec8.mp3",
+   "v": "3e33d9e3",
+   "d": 3.28,
+   "s": [
+    [
+     0.04,
+     1.03
+    ],
+    [
+     1.37,
+     2.0
+    ],
+    [
+     2.14,
+     3.15
+    ]
+   ]
+  },
+  "skub bolden hen over ordet. eller tryk på den.": {
+   "f": "j/db1f48944baa.mp3",
+   "v": "d7a08d46",
+   "d": 3.99,
+   "s": [
+    [
+     0.04,
+     1.8
+    ],
+    [
+     2.89,
+     3.87
+    ]
+   ]
+  },
+  "skub dino hen over ordet. eller tryk på ham.": {
+   "f": "j/6fea6ce177ee.mp3",
+   "v": "5d30e0fb",
+   "d": 4.0,
+   "s": [
+    [
+     0.03,
+     1.79
+    ],
+    [
+     2.87,
+     3.85
+    ]
+   ]
+  },
+  "skub fut hen over ordet. eller tryk på ham.": {
+   "f": "j/3bfdb3997424.mp3",
+   "v": "5170cbd8",
+   "d": 3.76,
+   "s": [
+    [
+     0.04,
+     1.53
+    ],
+    [
+     2.64,
+     3.62
+    ]
+   ]
+  },
+  "sol": {
+   "f": "j/a01c651c9187.mp3",
+   "v": "4ebba5f7",
+   "d": 0.63,
+   "s": [
+    [
+     0.04,
+     0.51
+    ]
+   ]
+  },
+  "sol. fint!": {
+   "f": "j/5fb32a8dedf0.mp3",
+   "v": "08e32c8b",
+   "d": 2.16,
+   "s": [
+    [
+     0.04,
+     0.48
+    ],
+    [
+     1.55,
+     2.02
+    ]
+   ]
+  },
+  "sol. godt, kaptajn!": {
+   "f": "j/7ac1256dd096.mp3",
+   "v": "3243d350",
+   "d": 2.74,
+   "s": [
+    [
+     0.04,
+     0.48
+    ],
+    [
+     1.5,
+     1.72
+    ],
+    [
+     2.04,
+     2.59
+    ]
+   ]
+  },
+  "sol. ja!": {
+   "f": "j/9bc14a7537b1.mp3",
+   "v": "e1862f80",
+   "d": 1.92,
+   "s": [
+    [
+     0.04,
+     0.48
+    ],
+    [
+     1.53,
+     1.79
+    ]
+   ]
+  },
+  "sol. sådan!": {
+   "f": "j/a99d8d14bdef.mp3",
+   "v": "35ce06a7",
+   "d": 2.27,
+   "s": [
+    [
+     0.04,
+     0.48
+    ],
+    [
+     1.51,
+     2.14
+    ]
+   ]
+  },
+  "sådan!": {
+   "f": "j/58aafbe79d0d.mp3",
+   "v": "bf0060f9",
+   "d": 0.75,
+   "s": [
+    [
+     0.04,
+     0.62
+    ]
+   ]
+  },
+  "ti": {
+   "f": "j/4a7fa622b4f0.mp3",
+   "v": "9ae64568",
+   "d": 0.52,
+   "s": [
+    [
+     0.04,
+     0.37
+    ]
+   ]
+  },
+  "ti! ni!": {
+   "f": "j/e40c09a88bf7.mp3",
+   "v": "38ca10aa",
+   "d": 2.15,
+   "s": [
+    [
+     0.04,
+     0.37
+    ],
+    [
+     1.68,
+     2.02
+    ]
+   ]
+  },
+  "ti, ni ... fut? nu?": {
+   "f": "j/893ec0b7e299.mp3",
+   "v": "2fd154ac",
+   "d": 4.14,
+   "s": [
+    [
+     0.04,
+     0.34
+    ],
+    [
+     0.66,
+     0.94
+    ],
+    [
+     2.19,
+     2.55
+    ],
+    [
+     3.68,
+     4.01
+    ]
+   ]
+  },
+  "ti, ni ... nu!": {
+   "f": "j/21505261a97a.mp3",
+   "v": "45d2ba61",
+   "d": 1.38,
+   "s": [
+    [
+     0.03,
+     0.37
+    ],
+    [
+     0.65,
+     1.23
+    ]
+   ]
+  },
+  "to": {
+   "f": "j/096989f5b1fe.mp3",
+   "v": "ccf5237c",
+   "d": 0.51,
+   "s": [
+    [
+     0.04,
+     0.37
+    ]
+   ]
+  },
+  "tobi": {
+   "f": "j/5bf98a96c288.mp3",
+   "v": "7601517e",
+   "d": 0.72,
+   "s": [
+    [
+     0.04,
+     0.57
+    ]
+   ]
+  },
+  "tobi løb og løb.": {
+   "f": "j/e16a9fbf02d6.mp3",
+   "v": "07d0fb0c",
+   "d": 1.55,
+   "s": [
+    [
+     0.04,
+     1.33
+    ]
+   ]
+  },
+  "tobi! ib! ti mus!": {
+   "f": "j/4f9d6c42942f.mp3",
+   "v": "32ca1df4",
+   "d": 4.05,
+   "s": [
+    [
+     0.04,
+     0.57
+    ],
+    [
+     1.82,
+     1.97
+    ],
+    [
+     3.16,
+     3.92
+    ]
+   ]
+  },
+  "tobi! oda! nu! løb!": {
+   "f": "j/d5840482e58e.mp3",
+   "v": "29ef50d3",
+   "d": 5.39,
+   "s": [
+    [
+     0.04,
+     0.57
+    ],
+    [
+     1.82,
+     2.23
+    ],
+    [
+     3.36,
+     3.7
+    ],
+    [
+     4.85,
+     5.17
+    ]
+   ]
+  },
+  "tryk på det, du vil.": {
+   "f": "j/b3506c4bd53f.mp3",
+   "v": "ecdb184d",
+   "d": 1.41,
+   "s": [
+    [
+     0.03,
+     0.65
+    ],
+    [
+     0.88,
+     1.25
+    ]
+   ]
+  },
+  "tryk på næste.": {
+   "f": "j/5133323c2e55.mp3",
+   "v": "ea34ec76",
+   "d": 1.07,
+   "s": [
+    [
+     0.04,
+     0.94
+    ]
+   ]
+  },
+  "tryk på ordet.": {
+   "f": "j/afc2694a970f.mp3",
+   "v": "6ccbefad",
+   "d": 1.02,
+   "s": [
+    [
+     0.03,
+     0.89
+    ]
+   ]
+  },
+  "træk bolden under ordene, kaptajn.": {
+   "f": "j/c936760ca127.mp3",
+   "v": "7f1c0d21",
+   "d": 2.6,
+   "s": [
+    [
+     0.04,
+     1.64
+    ],
+    [
+     1.91,
+     2.45
+    ]
+   ]
+  },
+  "træk dino under ordene, kaptajn.": {
+   "f": "j/7276fb5e5ad2.mp3",
+   "v": "d75c8a11",
+   "d": 2.5,
+   "s": [
+    [
+     0.04,
+     1.53
+    ],
+    [
+     1.8,
+     2.37
+    ]
+   ]
+  },
+  "træk fut under ordene, kaptajn.": {
+   "f": "j/bba0289fb7de.mp3",
+   "v": "c73dc4f0",
+   "d": 2.3,
+   "s": [
+    [
+     0.04,
+     1.35
+    ],
+    [
+     1.62,
+     2.17
+    ]
+   ]
+  },
+  "tuba": {
+   "f": "j/420421524143.mp3",
+   "v": "b32603f1",
+   "d": 0.7,
+   "s": [
+    [
+     0.04,
+     0.57
+    ]
+   ]
+  },
+  "tuba! dit gab!": {
+   "f": "j/99805e49cfbf.mp3",
+   "v": "513a78d9",
+   "d": 2.35,
+   "s": [
+    [
+     0.04,
+     0.58
+    ],
+    [
+     1.68,
+     2.14
+    ]
+   ]
+  },
+  "tuba! løb! nu!": {
+   "f": "j/083367f6df5c.mp3",
+   "v": "d143953f",
+   "d": 3.78,
+   "s": [
+    [
+     0.04,
+     0.6
+    ],
+    [
+     1.73,
+     2.05
+    ],
+    [
+     3.3,
+     3.65
+    ]
+   ]
+  },
+  "tuba! mit æg! mus, mus!": {
+   "f": "j/f43cf86d39a8.mp3",
+   "v": "d8784fba",
+   "d": 4.97,
+   "s": [
+    [
+     0.04,
+     0.59
+    ],
+    [
+     1.69,
+     2.02
+    ],
+    [
+     2.15,
+     2.44
+    ],
+    [
+     3.57,
+     4.08
+    ],
+    [
+     4.34,
+     4.84
+    ]
+   ]
+  },
+  "tubas store gab er lige over ægget! dino har brug for hjælp. skriv mus i sandet, kaptajn!": {
+   "f": "j/1a28a6e83919.mp3",
+   "v": "79f6e268",
+   "d": 7.84,
+   "s": [
+    [
+     0.04,
+     2.3
+    ],
+    [
+     3.44,
+     4.56
+    ],
+    [
+     5.67,
+     6.94
+    ],
+    [
+     7.18,
+     7.72
+    ]
+   ]
+  },
+  "ufo": {
+   "f": "j/b792bbdb7140.mp3",
+   "v": "afa16d53",
+   "d": 0.57,
+   "s": [
+    [
+     0.04,
+     0.44
+    ]
+   ]
+  },
+  "ufo! ufo! løb, oda!": {
+   "f": "j/e219541bc8e3.mp3",
+   "v": "d34fe5b8",
+   "d": 4.23,
+   "s": [
+    [
+     0.03,
+     0.43
+    ],
+    [
+     1.55,
+     1.95
+    ],
+    [
+     3.07,
+     3.39
+    ],
+    [
+     3.69,
+     4.1
+    ]
+   ]
+  },
+  "uh": {
+   "f": "j/271f16c72dec.mp3",
+   "v": "3825b59f",
+   "d": 0.42,
+   "s": [
+    [
+     0.03,
+     0.29
+    ]
+   ]
+  },
+  "uh! nat? nu?": {
+   "f": "j/3854cfcd5697.mp3",
+   "v": "7063a9ae",
+   "d": 3.36,
+   "s": [
+    [
+     0.03,
+     0.3
+    ],
+    [
+     1.44,
+     1.79
+    ],
+    [
+     2.92,
+     3.23
+    ]
+   ]
+  },
+  "uh! uh! mus!": {
+   "f": "j/8215366ee77f.mp3",
+   "v": "c7a4df18",
+   "d": 3.49,
+   "s": [
+    [
+     0.03,
+     0.3
+    ],
+    [
+     1.41,
+     1.68
+    ],
+    [
+     2.81,
+     3.36
+    ]
+   ]
+  },
+  "vidste du det? de rigtige astronauter var cirka tre dage om at flyve til månen.": {
+   "f": "j/3fb37c4ba21e.mp3",
+   "v": "284ae6cb",
+   "d": 5.68,
+   "s": [
+    [
+     0.03,
+     0.78
+    ],
+    [
+     1.81,
+     3.11
+    ],
+    [
+     3.25,
+     5.55
+    ]
+   ]
+  },
+  "vidste du det? målmanden må gerne tage bolden med hænderne, men kun inde i sit eget felt.": {
+   "f": "j/8c71bfcadbfb.mp3",
+   "v": "f5c9dbc8",
+   "d": 6.17,
+   "s": [
+    [
+     0.03,
+     0.78
+    ],
+    [
+     1.81,
+     3.95
+    ],
+    [
+     4.2,
+     6.04
+    ]
+   ]
+  },
+  "vidste du det? selv de allerstørste langhalse kom ud af et æg, der var mindre end en fodbold.": {
+   "f": "j/41855777d428.mp3",
+   "v": "106f02b5",
+   "d": 6.39,
+   "s": [
+    [
+     0.03,
+     0.77
+    ],
+    [
+     1.82,
+     4.4
+    ],
+    [
+     4.73,
+     6.26
+    ]
+   ]
+  },
+  "vil du stoppe? tryk på dut for at stoppe.": {
+   "f": "j/c5644dc1fcc7.mp3",
+   "v": "587e5ec5",
+   "d": 3.29,
+   "s": [
+    [
+     0.04,
+     0.82
+    ],
+    [
+     1.87,
+     3.16
+    ]
+   ]
+  },
+  "æg": {
+   "f": "j/8e5e70ea16a6.mp3",
+   "v": "07a6f38f",
+   "d": 0.44,
+   "s": [
+    [
+     0.04,
+     0.23
+    ]
+   ]
+  },
+  "æg. fint!": {
+   "f": "j/7cdc2acc5237.mp3",
+   "v": "f6b6aea3",
+   "d": 1.97,
+   "s": [
+    [
+     0.02,
+     0.22
+    ],
+    [
+     1.36,
+     1.83
+    ]
+   ]
+  },
+  "æg. godt, kaptajn!": {
+   "f": "j/6fc5d273fcab.mp3",
+   "v": "aaaadef3",
+   "d": 2.56,
+   "s": [
+    [
+     0.02,
+     0.22
+    ],
+    [
+     1.31,
+     1.54
+    ],
+    [
+     1.85,
+     2.44
+    ]
+   ]
+  },
+  "æg. ja!": {
+   "f": "j/48ba2515a6ac.mp3",
+   "v": "9bab6135",
+   "d": 1.74,
+   "s": [
+    [
+     0.02,
+     0.22
+    ],
+    [
+     1.35,
+     1.62
+    ]
+   ]
+  },
+  "æg. sådan!": {
+   "f": "j/f123433f223f.mp3",
+   "v": "a10cdcae",
+   "d": 2.11,
+   "s": [
+    [
+     0.02,
+     0.22
+    ],
+    [
+     1.37,
+     1.98
+    ]
+   ]
+  }
+ },
+ "bogstaver": {
+  "a": {
+   "f": "bogstav/a.mp3",
+   "v": "0dcf0079",
+   "d": 1.01,
+   "kilde": "egen"
+  },
+  "b": {
+   "f": "bogstav/b.mp3",
+   "v": "d680d8d2",
+   "d": 0.28,
+   "kilde": "egen"
+  },
+  "c": {
+   "f": "bogstav/c.mp3",
+   "v": "748651f5",
+   "d": 1.037
+  },
+  "d": {
+   "f": "bogstav/d.mp3",
+   "v": "a3d2e9dd",
+   "d": 0.27,
+   "kilde": "egen"
+  },
+  "e": {
+   "f": "bogstav/e.mp3",
+   "v": "cfba172d",
+   "d": 1.21,
+   "kilde": "egen"
+  },
+  "f": {
+   "f": "bogstav/f.mp3",
+   "v": "32752c6b",
+   "d": 0.61,
+   "kilde": "egen"
+  },
+  "g": {
+   "f": "bogstav/g.mp3",
+   "v": "ce4b5efc",
+   "d": 0.19,
+   "kilde": "egen"
+  },
+  "h": {
+   "f": "bogstav/h.mp3",
+   "v": "90704a38",
+   "d": 0.37,
+   "kilde": "egen"
+  },
+  "i": {
+   "f": "bogstav/i.mp3",
+   "v": "5535b865",
+   "d": 0.87,
+   "kilde": "egen"
+  },
+  "j": {
+   "f": "bogstav/j.mp3",
+   "v": "d4d88664",
+   "d": 1.2,
+   "kilde": "egen"
+  },
+  "k": {
+   "f": "bogstav/k.mp3",
+   "v": "177bc9cf",
+   "d": 0.27,
+   "kilde": "egen"
+  },
+  "l": {
+   "f": "bogstav/l.mp3",
+   "v": "ff35664e",
+   "d": 1.09,
+   "kilde": "egen"
+  },
+  "m": {
+   "f": "bogstav/m.mp3",
+   "v": "11e43092",
+   "d": 1.01,
+   "kilde": "egen"
+  },
+  "n": {
+   "f": "bogstav/n.mp3",
+   "v": "3c127e34",
+   "d": 1.013
+  },
+  "o": {
+   "f": "bogstav/o.mp3",
+   "v": "309fb511",
+   "d": 1.044
+  },
+  "p": {
+   "f": "bogstav/p.mp3",
+   "v": "213ee72c",
+   "d": 0.105
+  },
+  "q": {
+   "f": "bogstav/q.mp3",
+   "v": "177bc9cf",
+   "d": 0.27,
+   "kilde": "egen"
+  },
+  "r": {
+   "f": "bogstav/r.mp3",
+   "v": "c47d21d8",
+   "d": 1.011
+  },
+  "s": {
+   "f": "bogstav/s.mp3",
+   "v": "748651f5",
+   "d": 1.037
+  },
+  "t": {
+   "f": "bogstav/t.mp3",
+   "v": "3d078181",
+   "d": 0.135
+  },
+  "u": {
+   "f": "bogstav/u.mp3",
+   "v": "5fd72e77",
+   "d": 1.017
+  },
+  "v": {
+   "f": "bogstav/v.mp3",
+   "v": "10037bf2",
+   "d": 0.953
+  },
+  "w": {
+   "f": "bogstav/w.mp3",
+   "v": "10037bf2",
+   "d": 0.953
+  },
+  "x": {
+   "f": "bogstav/x.mp3",
+   "v": "68fd043f",
+   "d": 0.19
+  },
+  "y": {
+   "f": "bogstav/y.mp3",
+   "v": "832192aa",
+   "d": 1.003
+  },
+  "z": {
+   "f": "bogstav/z.mp3",
+   "v": "748651f5",
+   "d": 1.037
+  },
+  "æ": {
+   "f": "bogstav/ae.mp3",
+   "v": "0d50d4fd",
+   "d": 1.013
+  },
+  "ø": {
+   "f": "bogstav/oe.mp3",
+   "v": "90742558",
+   "d": 1.016
+  },
+  "å": {
+   "f": "bogstav/aa.mp3",
+   "v": "17401b4c",
+   "d": 1.012
+  }
+ }
+}
