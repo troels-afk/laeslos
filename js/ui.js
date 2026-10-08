@@ -1,9 +1,9 @@
 // Fælles komponenter: SVG-ikoner (tegnet i kode, ingen emoji), billeder med pladsholder, Bip og hans taleboble,
 // trin-prikker, hold-knapper og overlays.
-import { ORDBOG, STEDER } from './content.js?v=bab7c031e5';
-import { esc, sleep } from './util.js?v=bab7c031e5';
-import { events, say, sfx, interrupt, speechGen } from './audio.js?v=bab7c031e5';
-import { TALE } from './tale.js?v=bab7c031e5';
+import { ORDBOG, STEDER } from './content.js?v=03a6968a20';
+import { esc, sleep } from './util.js?v=03a6968a20';
+import { events, say, sfx, interrupt, speechGen } from './audio.js?v=03a6968a20';
+import { TALE } from './tale.js?v=03a6968a20';
 
 const INK = '#2b2a33';
 const S = `stroke="${INK}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"`;

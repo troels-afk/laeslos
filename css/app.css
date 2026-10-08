@@ -283,6 +283,10 @@ svg { display: block; }
 .sky-star svg { width: 100%; height: 100%; filter: drop-shadow(0 0 6px rgba(255,226,122,.65)); }
 .sky-star span { position: absolute; inset: 0; display: grid; place-items: center; padding-top: 4px; font-family: var(--font-read); font-weight: 700; font-size: 20px; opacity: 0; transition: opacity .2s; }
 .sky-star.shown span { opacity: 1; }
+/* Mange bogstaver (hele alfabetet er standard): to lige lange rækker i stedet for én der løber ud over kanten */
+.sky-stars.mange { display: grid; grid-template-columns: repeat(var(--cols), auto); justify-content: center; gap: 2px clamp(2px, .5vw, 6px); }
+.sky-stars.mange .sky-star { width: clamp(24px, 3vw, 40px); height: clamp(24px, 3vw, 40px); }
+.sky-stars.mange .sky-star span { font-size: 17px; }
 .gate-btn {
   position: relative; width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); background: rgba(255,255,255,.12);
   padding: 7px; flex: none; opacity: .75;
@@ -680,11 +684,17 @@ svg { display: block; }
 /* ================= Omklædningsrummet ================= */
 
 .screen.album { background: linear-gradient(180deg, #e6f0f7, #f4efe4); }
-.lockers { flex: 1; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 14px 12px; padding: 6px 30px var(--free-bottom); max-width: 1100px; margin: 0 auto; }
+/* Hele alfabetet (29 skabe) i rækkefølge: ca. 10 pr. række og 3 rækker på en liggende iPad */
+.lockers { flex: 1; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 12px 10px; padding: 6px 24px var(--free-bottom); max-width: 1180px; margin: 0 auto; }
 .locker {
-  position: relative; width: clamp(80px, 8.6vw, 108px); height: clamp(124px, 20vh, 160px); border: var(--line); border-radius: 10px;
+  position: relative; width: clamp(72px, 7.6vw, 98px); height: clamp(104px, 16vh, 140px); border: var(--line); border-radius: 10px;
   background: linear-gradient(180deg, #8cc2ec, #6ea9db); box-shadow: var(--shadow-sm); padding: 0;
 }
+/* Bogstaver, klassen ikke har haft endnu: dæmpet grå, men stadig til at trykke på */
+.locker.ikke-endnu { background: linear-gradient(180deg, #d6dbe2, #c3c9d2); box-shadow: none; }
+.locker.ikke-endnu .locker-letter { color: #8a8f9c; border-color: #9aa0ad; }
+.locker.ikke-endnu .locker-vents { opacity: .25; }
+.locker.ikke-endnu .locker-handle { background: #c9ccd3; border-color: #9aa0ad; }
 .locker-vents { position: absolute; left: 18%; right: 18%; top: 10px; height: 18px; background: repeating-linear-gradient(180deg, var(--ink) 0 3px, transparent 3px 7px); opacity: .55; border-radius: 2px; }
 .locker-letter { position: absolute; left: 6px; right: 6px; top: 34%; background: #fff; border: 2.5px solid var(--ink); border-radius: 10px; font-family: var(--font-read); font-weight: 700; font-size: clamp(28px, 4.5vh, 38px); line-height: 1.25; }
 .locker-handle { position: absolute; right: 10px; bottom: 16px; width: 8px; height: 22px; background: var(--sun); border: 2px solid var(--ink); border-radius: 3px; }
@@ -880,6 +890,9 @@ svg { display: block; }
   .kmd-board.skilt { margin-bottom: 70px; }
   .kmd-board.skilt::after { height: 60px; bottom: -62px; }
   .kmd-board.skilt::before { bottom: -72px; }
+  .sky-stars.mange { grid-template-columns: repeat(var(--cols4), auto); max-width: none; gap: 2px 1px; }
+  .sky-stars.mange .sky-star { width: 22px; height: 22px; }
+  .sky-stars.mange .sky-star span { font-size: 15px; }
 }
 @media (max-width: 600px) {
   .cover-team { width: calc(29vw - 8px); }
@@ -905,3 +918,4 @@ html.rm *, html.rm *::before, html.rm *::after { animation: none !important; tra
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.row-btns { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 8px; }

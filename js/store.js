@@ -1,6 +1,6 @@
 // Gem fremskridt i localStorage (ll_state). Mønstret er fra Matematik-Zoos store.js, men uden server og profiler:
 // prototypen har én spiller. Alt er pakket ind i try/catch (privat vindue, fuld disk, blokerede data).
-import { KLASSENS_17 } from './content.js?v=bab7c031e5';
+import { ALFABET, KLASSENS_17 } from './content.js?v=03a6968a20';
 
 const KEY = 'll_state';
 const LOG_MAX = 400;
@@ -8,7 +8,8 @@ const LOG_MAX = 400;
 export function defaults() {
   return {
     v: 1,
-    letters: KLASSENS_17.slice(),
+    letters: ALFABET.slice(), // alle bogstaver som standard; forælderen slår fra på Trænerbænken (Troels 8. okt. 2026)
+    lettersStd: 2, // 2 = standarden er hele alfabetet (1 var klassens 17)
     settings: { defaultMode: 'sammen', writeStep: 2, minSecPerLetter: 0.6, sound: true, reducedMotion: false },
     dut: { details: [], read: {} }, // read[id] = { n, last }
     log: [], // { t, act, item, res, s (scoret), ms, story }
@@ -26,10 +27,14 @@ function load() {
     if (!raw) return defaults();
     const d = defaults(), s = JSON.parse(raw);
     if (!s || s.v !== 1) return d;
-    const letters = arr(s.letters, d.letters).filter((l) => typeof l === 'string');
+    let letters = arr(s.letters, d.letters).filter((l) => typeof l === 'string');
+    // Engangs-opgradering: den gamle standard (præcis klassens 17) bliver til hele alfabetet.
+    // Har forælderen selv valgt bogstaver, røres de ikke.
+    if (s.lettersStd !== 2 && letters.length === KLASSENS_17.length && KLASSENS_17.every((l) => letters.includes(l))) letters = ALFABET.slice();
     return {
       ...d,
       letters,
+      lettersStd: 2,
       settings: { ...d.settings, ...obj(s.settings) },
       dut: { details: arr(s.dut?.details, []).filter((x) => typeof x === 'string'), read: obj(s.dut?.read) },
       log: arr(s.log, []).filter((e) => e && typeof e === 'object'),

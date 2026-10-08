@@ -3,7 +3,7 @@
 // tools/lyd/katalog.json – listen over alle tekster, som tools/lyd/tts.py laver Jeppe-lydfiler til.
 // Ret en replik her, og kør derefter:  node tools/lyd/katalog.mjs && python3 tools/lyd/tts.py app
 // (kun nye eller ændrede tekster sendes til Azure).
-import { BOGSTAVNAVN } from './content.js?v=bab7c031e5';
+import { BOGSTAVNAVN } from './content.js?v=03a6968a20';
 
 export const TALE = {
   // Start, Dut, stederne

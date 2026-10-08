@@ -1,10 +1,10 @@
 // Forældredelen: forældrespærren (hold 3 sek. + lille regnestykke), Trænerbænken, lydstudiet "Jeres egen stemme" (valgfrit),
 // loggen og nulstilling (bekræftes i siden, aldrig med confirm()).
-import { ALFABET, KLASSENS_17, HISTORIER, DAGENS_ORD_LYD, lydtype, kraevedeBogstaver } from './content.js?v=bab7c031e5';
-import { state, save, reset, opslagInfo } from './store.js?v=bab7c031e5';
-import { hasRec, playRec, delRec, saveRec, startRecording, clearRecs, setSound, hasLetterSound, hasLetterClip, hasClip, playLetter, say, claim } from './audio.js?v=bab7c031e5';
-import { ICON, overlay, onClick, holdButton, ringSvg, bubble } from './ui.js?v=bab7c031e5';
-import { $, $$, esc, shuffle, ri, clock } from './util.js?v=bab7c031e5';
+import { ALFABET, KLASSENS_17, HISTORIER, DAGENS_ORD_LYD, lydtype, kraevedeBogstaver } from './content.js?v=03a6968a20';
+import { state, save, reset, opslagInfo } from './store.js?v=03a6968a20';
+import { hasRec, playRec, delRec, saveRec, startRecording, clearRecs, setSound, hasLetterSound, hasLetterClip, hasClip, playLetter, say, claim } from './audio.js?v=03a6968a20';
+import { ICON, overlay, onClick, holdButton, ringSvg, bubble } from './ui.js?v=03a6968a20';
+import { $, $$, esc, shuffle, ri, clock } from './util.js?v=03a6968a20';
 
 // ================= Forældrespærren =================
 
@@ -92,10 +92,10 @@ function letters(body) {
     const warn = Object.keys(HISTORIER).map((id) => [id, off(id)]).filter(([, o]) => o.length);
     body.innerHTML = `<div class="card">
       <h2>Ugens bogstaver</h2>
-      <p class="muted">Slå et bogstav til, når klassen har haft det. De 17 bogstaver, klassen har haft, er slået til. I prototypen styrer det stjernerne på Dut og skabene i omklædningsrummet.</p>
+      <p class="muted">Som standard er alle bogstaver slået til. Slå de bogstaver fra, klassen ikke har haft endnu – de står så dæmpet i omklædningsrummet og forsvinder fra stjernerne på Dut.</p>
       <div class="letter-grid">${ALFABET.map((l) => `<button class="lt-toggle ${state.letters.includes(l) ? 'on' : ''}" data-l="${l}" aria-pressed="${state.letters.includes(l)}">${l.toUpperCase()}${l}</button>`).join('')}</div>
       ${warn.length ? `<div class="warn">${warn.map(([id, o]) => `"${esc(HISTORIER[id].titel)}" bruger ${o.map((x) => `<b>${x}</b>`).join(', ')}, som er slået fra.`).join('<br>')}</div>` : ''}
-      <button class="link-btn" id="std17">Brug klassens 17 bogstaver</button>
+      <div class="row-btns"><button class="link-btn" id="alle">Slå alle til</button> <button class="link-btn" id="std17">Kun klassens 17 bogstaver</button></div>
     </div>`;
     $$('.lt-toggle', body).forEach((b) => onClick(b, () => {
       const l = b.dataset.l;
@@ -103,6 +103,7 @@ function letters(body) {
       save();
       draw();
     }));
+    onClick($('#alle', body), () => { state.letters = ALFABET.slice(); save(); draw(); });
     onClick($('#std17', body), () => { state.letters = KLASSENS_17.slice(); save(); draw(); });
   };
   draw();

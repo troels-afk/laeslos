@@ -3,12 +3,12 @@
 // Der er aldrig en "forkert"-lyd; et forkert valg giver et lyd-hint. Valg i Læs og vælg giver ingen sjov effekt.
 // Tryk-handlere bruger claim() (afbryd det, der tales, og stop kæden, når et nyere tryk kommer) og en
 // settled-vagt, så et gammelt forkert-hint aldrig taler videre efter et rigtigt svar eller på næste skærm.
-import { ORDBOG, DRILLEORD, lydtype, lydering, antalBogstaver } from './content.js?v=bab7c031e5';
-import { state, log } from './store.js?v=bab7c031e5';
-import { say, playLetter, playWord, hasLydering, playLydering, hasRec, hasLetterClip, hasLetterSound, letterMs, sfx, claim } from './audio.js?v=bab7c031e5';
-import { ICON, icon, wordPic, instruct, bubble, onTap, onClick, koeretoej, koeretoejNavn } from './ui.js?v=bab7c031e5';
-import { TALE, findBogstav, ordOgRos, skub } from './tale.js?v=bab7c031e5';
-import { $, $$, esc, shuffle, shuffleNot, sleep, reducedMotion } from './util.js?v=bab7c031e5';
+import { ORDBOG, DRILLEORD, lydtype, lydering, antalBogstaver } from './content.js?v=03a6968a20';
+import { state, log } from './store.js?v=03a6968a20';
+import { say, playLetter, playWord, hasLydering, playLydering, hasRec, hasLetterClip, hasLetterSound, letterMs, sfx, claim } from './audio.js?v=03a6968a20';
+import { ICON, icon, wordPic, instruct, bubble, onTap, onClick, koeretoej, koeretoejNavn } from './ui.js?v=03a6968a20';
+import { TALE, findBogstav, ordOgRos, skub } from './tale.js?v=03a6968a20';
+import { $, $$, esc, shuffle, shuffleNot, sleep, reducedMotion } from './util.js?v=03a6968a20';
 
 const cur = (o) => { if (window.__ll) window.__ll.cur = o; };
 const ROS = TALE.ros;

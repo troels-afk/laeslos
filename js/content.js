@@ -1,6 +1,6 @@
 // Indhold som data: bogstaver, billedordbogen, stederne på Dut, historierne og missionerne.
 // Historieteksterne kommer uændret fra koncept/eksempel-historier.json via tools/konverter_historier.mjs.
-import { HISTORIER, MISSIONER_JSON } from './historier.js?v=bab7c031e5';
+import { HISTORIER, MISSIONER_JSON } from './historier.js?v=03a6968a20';
 
 export { HISTORIER };
 

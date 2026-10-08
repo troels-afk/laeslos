@@ -1,15 +1,15 @@
 // "Læs løs!" v0.1 – router og skærme: Start → Dut → stedets side → missionen → slut. Plus omklædningsrummet
 // og Trænerbænken. Testkrog: window.__ll = { state, go(screen), content, cur, … }.
-import * as C from './content.js?v=bab7c031e5';
-import { state, reset as resetState } from './store.js?v=bab7c031e5';
-import * as A from './audio.js?v=bab7c031e5';
-import { ICON, icon, pic, wordPic, dots, topbar, bipButton, instruct, repeatInstruction, getInstruction, setInstruction, holdButton, ringSvg, overlay, onClick, onTap, clearBubble, koeretoej } from './ui.js?v=bab7c031e5';
-import * as ACT from './activities.js?v=bab7c031e5';
-import { playStory, ending } from './story.js?v=bab7c031e5';
-import { gateButton, armGate, renderBench } from './parent.js?v=bab7c031e5';
-import { SCENE_SVG } from './scenes.js?v=bab7c031e5';
-import { TALE } from './tale.js?v=bab7c031e5';
-import { $, $$, esc, sleep } from './util.js?v=bab7c031e5';
+import * as C from './content.js?v=03a6968a20';
+import { state, reset as resetState } from './store.js?v=03a6968a20';
+import * as A from './audio.js?v=03a6968a20';
+import { ICON, icon, pic, wordPic, dots, topbar, bipButton, instruct, repeatInstruction, getInstruction, setInstruction, holdButton, ringSvg, overlay, onClick, onTap, clearBubble, koeretoej } from './ui.js?v=03a6968a20';
+import * as ACT from './activities.js?v=03a6968a20';
+import { playStory, ending } from './story.js?v=03a6968a20';
+import { gateButton, armGate, renderBench } from './parent.js?v=03a6968a20';
+import { SCENE_SVG } from './scenes.js?v=03a6968a20';
+import { TALE } from './tale.js?v=03a6968a20';
+import { $, $$, esc, sleep } from './util.js?v=03a6968a20';
 
 const app = document.getElementById('app');
 const session = { mode: state.settings.defaultMode };
@@ -86,7 +86,7 @@ function showDut({ efterMission = false } = {}) {
     </div>
     <header class="dut-top">
       <button class="round-btn album-btn" id="album" aria-label="Omklædningsrummet">${ICON.skab()}</button>
-      <div class="sky-stars">${state.letters.map((l) => `<button class="sky-star" data-l="${l}" aria-label="Stjerne med bogstavet ${l}">${ICON.stjerne()}<span>${esc(l)}</span></button>`).join('')}</div>
+      <div class="sky-stars${state.letters.length > 18 ? ' mange' : ''}" style="--cols:${Math.ceil(state.letters.length / 2)};--cols4:${Math.ceil(state.letters.length / 4)}">${state.letters.map((l) => `<button class="sky-star" data-l="${l}" aria-label="Stjerne med bogstavet ${l}">${ICON.stjerne()}<span>${esc(l)}</span></button>`).join('')}</div>
       ${bipButton()}
       ${gateButton()}
     </header>`);
@@ -219,7 +219,12 @@ function readWords(l) {
 
 function showAlbum() {
   const el = screen('album', `${topbar({ back: 'to-dut', backLabel: 'Tilbage til Dut' })}
-    <div class="lockers">${state.letters.map((l) => `<button class="locker" data-l="${l}" aria-label="Skabet med ${l}"><span class="locker-vents" aria-hidden="true"></span><span class="locker-letter">${l.toUpperCase()}${l}</span><span class="locker-handle" aria-hidden="true"></span></button>`).join('')}</div>`);
+    <div class="lockers">${C.ALFABET.map((l) => {
+      // Hele alfabetet i rækkefølge, som det hænger i klassen. Bogstaver, klassen ikke har haft endnu, står dæmpet
+      // (men kan stadig høres) – ingen tællere og ingen lås (Troels 8. okt. 2026).
+      const har = state.letters.includes(l);
+      return `<button class="locker${har ? '' : ' ikke-endnu'}" data-l="${l}" aria-label="Skabet med ${l}${har ? '' : ', kommer senere'}"><span class="locker-vents" aria-hidden="true"></span><span class="locker-letter">${l.toUpperCase()}${l}</span><span class="locker-handle" aria-hidden="true"></span></button>`;
+    }).join('')}</div>`);
   onClick($('#to-dut', el), showDut);
   instruct(TALE.album);
   $$('.locker', el).forEach((b) => onTap(b, () => letterCard(b.dataset.l)));
