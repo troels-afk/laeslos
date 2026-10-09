@@ -1,15 +1,16 @@
 // "Læs løs!" v0.1 – router og skærme: Start → Dut → stedets side → missionen → slut. Plus omklædningsrummet
 // og Trænerbænken. Testkrog: window.__ll = { state, go(screen), content, cur, … }.
-import * as C from './content.js?v=03a6968a20';
-import { state, reset as resetState } from './store.js?v=03a6968a20';
-import * as A from './audio.js?v=03a6968a20';
-import { ICON, icon, pic, wordPic, dots, topbar, bipButton, instruct, repeatInstruction, getInstruction, setInstruction, holdButton, ringSvg, overlay, onClick, onTap, clearBubble, koeretoej } from './ui.js?v=03a6968a20';
-import * as ACT from './activities.js?v=03a6968a20';
-import { playStory, ending } from './story.js?v=03a6968a20';
-import { gateButton, armGate, renderBench } from './parent.js?v=03a6968a20';
-import { SCENE_SVG } from './scenes.js?v=03a6968a20';
-import { TALE } from './tale.js?v=03a6968a20';
-import { $, $$, esc, sleep } from './util.js?v=03a6968a20';
+import * as C from './content.js?v=6f70bf5933';
+import { state, reset as resetState } from './store.js?v=6f70bf5933';
+import * as A from './audio.js?v=6f70bf5933';
+import { ICON, icon, pic, wordPic, dots, topbar, bipButton, instruct, repeatInstruction, getInstruction, setInstruction, holdButton, ringSvg, overlay, onClick, onTap, clearBubble, koeretoej } from './ui.js?v=6f70bf5933';
+import * as ACT from './activities.js?v=6f70bf5933';
+import { playStory, ending } from './story.js?v=6f70bf5933';
+import { skrivLyden, skrivBogstav, vaelgSkriveBogstav, skrivPause } from './skriv.js?v=6f70bf5933';
+import { gateButton, armGate, renderBench } from './parent.js?v=6f70bf5933';
+import { SCENE_SVG } from './scenes.js?v=6f70bf5933';
+import { TALE } from './tale.js?v=6f70bf5933';
+import { $, $$, esc, sleep } from './util.js?v=6f70bf5933';
 
 const app = document.getElementById('app');
 const session = { mode: state.settings.defaultMode };
@@ -137,7 +138,9 @@ function showPlace(id) {
 
 function missionSteps(m) {
   return [
-    ['lydjagt', ACT.lydjagt], ['hvilken', ACT.hvilkenLyd], ['sig', ACT.sigSelv],
+    ['lydjagt', ACT.lydjagt],
+    ...(vaelgSkriveBogstav(m.skriv) ? [['skriv', skrivLyden]] : []), // "Skriv lyden" (skriv.js)
+    ['hvilken', ACT.hvilkenLyd], ['sig', ACT.sigSelv],
     ...(m.nyt ? [['nyt', ACT.soveAeg]] : []),
     ['glide', ACT.glidebane], ['laesvaelg', ACT.laesVaelg], ['byg', ACT.bygOrdet],
     ['historie', playStory], ['slut', ending],
@@ -183,7 +186,8 @@ async function missionIntro(ctx) {
 
 function quitAsk(ctx) {
   if (document.querySelector('.overlay.quit-ov')) return; // dobbelttryk åbner ikke to
-  const prev = getInstruction();
+  const prev = getInstruction(), trin = window.__ll.step;
+  skrivPause(true); // "Skriv lyden": bogstavet afleveres ikke bag dialogen
   const o = overlay(`<div class="quit">
     <h2>Vil du stoppe?</h2>
     <div class="quit-btns">
@@ -191,8 +195,16 @@ function quitAsk(ctx) {
       <button class="big-btn" id="quit-yes">${ICON.dut()}<span>Ja, til Dut</span></button>
     </div></div>`, 'quit-ov', { onEscape: () => no() });
   instruct(TALE.stoppe);
-  // "Nej": tilbage til aktiviteten, og Bip gentager dens instruktion (ikke stop-spørgsmålet)
-  const no = () => { o.close(); setInstruction(prev); if (prev) repeatInstruction(); };
+  // "Nej": tilbage til aktiviteten, og Bip gentager dens instruktion (ikke stop-spørgsmålet). Er missionen gået videre,
+  // mens dialogen stod åben (et trin, der blev færdigt), er det det nye trins instruktion – aldrig en forældet.
+  const no = () => {
+    o.close();
+    skrivPause(false);
+    const nu = getInstruction();
+    const f = nu !== TALE.stoppe ? nu : window.__ll.step === trin ? prev : null;
+    setInstruction(f);
+    if (f) repeatInstruction();
+  };
   onClick($('#quit-no', o), no);
   onClick($('#quit-yes', o), () => { o.close(); showDut(); });
 }
@@ -221,7 +233,7 @@ function showAlbum() {
   const el = screen('album', `${topbar({ back: 'to-dut', backLabel: 'Tilbage til Dut' })}
     <div class="lockers">${C.ALFABET.map((l) => {
       // Hele alfabetet i rækkefølge, som det hænger i klassen. Bogstaver, klassen ikke har haft endnu, står dæmpet
-      // (men kan stadig høres) – ingen tællere og ingen lås (Troels 8. okt. 2026).
+      // (men kan stadig høres) – ingen tællere og ingen lås (okt. 2026).
       const har = state.letters.includes(l);
       return `<button class="locker${har ? '' : ' ikke-endnu'}" data-l="${l}" aria-label="Skabet med ${l}${har ? '' : ', kommer senere'}"><span class="locker-vents" aria-hidden="true"></span><span class="locker-letter">${l.toUpperCase()}${l}</span><span class="locker-handle" aria-hidden="true"></span></button>`;
     }).join('')}</div>`);
@@ -240,7 +252,10 @@ function letterCard(l) {
   const o = overlay(`<div class="lcard">
     <button class="round-btn lc-close" id="lc-close" aria-label="Luk">${ICON.tilbage()}</button>
     <div class="lc-big">${l.toUpperCase()}${l}</div>
-    <button class="say-btn" id="lc-sound">${ICON.hoejttaler()}<span>Hør lyden</span></button>
+    <div class="lc-btns">
+      <button class="say-btn" id="lc-sound">${ICON.hoejttaler()}<span>Hør lyden</span></button>
+      <button class="say-btn lc-skriv" id="lc-skriv" aria-label="Skriv bogstavet">${ICON.blyant()}<span>Skriv</span></button>
+    </div>
     <div class="lc-type ${type}">${type === 'hop' ? '<svg viewBox="0 0 60 30" aria-hidden="true"><path d="M4 26 Q16 0 30 26 Q44 0 56 26" fill="none" stroke="#2b2a33" stroke-width="4" stroke-linecap="round"/></svg>hoppe-lyd' : type === 'lang' ? '<svg viewBox="0 0 60 30" aria-hidden="true"><path d="M4 15 Q12 6 20 15 T36 15 T56 15" fill="none" stroke="#2b2a33" stroke-width="4" stroke-linecap="round"/></svg>lang lyd' : ''}</div>
     ${pics ? `<div class="lc-words">${pics}</div>` : ''}
   </div>`, 'lc-ov', { label: `Bogstavet ${l}`, onEscape: () => o.close() });
@@ -248,6 +263,20 @@ function letterCard(l) {
   A.playLetter(l, { anchor: big });
   onClick($('#lc-sound', o), () => { A.claim(); A.playLetter(l, { anchor: big }); });
   onClick($('#lc-close', o), () => o.close());
+  onClick($('#lc-skriv', o), () => { o.close(); showSkriv(l); });
+}
+
+// ================= Skriv bogstavet (fra bogstavkortet i Omklædningsrummet) =================
+
+async function showSkriv(l) {
+  const el = screen('skriv mission', `${topbar({ back: 'to-album', backLabel: 'Tilbage til omklædningsrummet' })}<div class="stage" id="stage" role="region" aria-label="Skriv bogstavet"></div>`);
+  const my = token;
+  onClick($('#to-album', el), showAlbum);
+  const stage = $('#stage', el);
+  for (;;) {
+    const r = await skrivBogstav(stage, { bogstav: l, alive: () => my === token, fra: 'album' });
+    if (my !== token || !r.igen) return;
+  }
 }
 
 // ================= Trænerbænken =================
@@ -269,6 +298,7 @@ function go(target, from = null) {
     case 'dut': return showDut();
     case 'place': return showPlace(arg || 'stadion');
     case 'album': return showAlbum();
+    case 'skriv': return showSkriv(arg || 'm');
     case 'parent': return showParent(arg);
     case 'mission': return startMission(arg, { from });
     case 'story': return startMission(arg, { from: 'historie' });

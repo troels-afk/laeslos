@@ -1,6 +1,6 @@
 // Gem fremskridt i localStorage (ll_state). Mønstret er fra Matematik-Zoos store.js, men uden server og profiler:
 // prototypen har én spiller. Alt er pakket ind i try/catch (privat vindue, fuld disk, blokerede data).
-import { ALFABET, KLASSENS_17 } from './content.js?v=03a6968a20';
+import { ALFABET, KLASSENS_17 } from './content.js?v=6f70bf5933';
 
 const KEY = 'll_state';
 const LOG_MAX = 400;
@@ -8,12 +8,17 @@ const LOG_MAX = 400;
 export function defaults() {
   return {
     v: 1,
-    letters: ALFABET.slice(), // alle bogstaver som standard; forælderen slår fra på Trænerbænken (Troels 8. okt. 2026)
+    letters: ALFABET.slice(), // alle bogstaver som standard; forælderen slår fra på Trænerbænken (okt. 2026)
     lettersStd: 2, // 2 = standarden er hele alfabetet (1 var klassens 17)
-    settings: { defaultMode: 'sammen', writeStep: 2, minSecPerLetter: 0.6, sound: true, reducedMotion: false },
+    settings: { defaultMode: 'sammen', writeStep: 2, minSecPerLetter: 0.6, sound: true, reducedMotion: false, skrivStreng: false },
     dut: { details: [], read: {} }, // read[id] = { n, last }
     log: [], // { t, act, item, res, s (scoret), ms, story }
     opslag: {}, // opslag[storyId][nr] = { how: 'selv' | 'hjaelp', mode: 'sammen' | 'selv', diktat: bool }
+    // Skriv bogstavet: skriv[l] = { trin: 1-3, ok (gode forsøg på trinnet), n (forsøg i alt), vist (har set animationen),
+    //   miss (omgange i træk på trinnet uden held: 2 → et trin ned),
+    //   tegn: de seneste 3 tegninger [{ t, trin, ok, grund, s: [[x,y,x,y,…] pr. streg] i hundrededele} ] }
+    skriv: {},
+    skrivLogbog: '', // dato (ÅÅÅÅ-MM-DD), hvor Bip sidst sagde "Skriv det også i logbogen!"
   };
 }
 
@@ -39,6 +44,8 @@ function load() {
       dut: { details: arr(s.dut?.details, []).filter((x) => typeof x === 'string'), read: obj(s.dut?.read) },
       log: arr(s.log, []).filter((e) => e && typeof e === 'object'),
       opslag: obj(s.opslag),
+      skriv: obj(s.skriv),
+      skrivLogbog: typeof s.skrivLogbog === 'string' ? s.skrivLogbog : '',
     };
   } catch {
     return defaults();

@@ -1,9 +1,9 @@
 // Lyd: Jeppes forudlavede klip (public/lyd/manifest.json), forælderens optagelser (IndexedDB ll_audio),
 // effekter med Web Audio og browserens stemme (speechSynthesis) kun som nødløsning.
 // Intet her må få appen til at hænge: alt venter med en timeout og fortsætter, også uden lyd (headless test).
-import { strakt, lydtype } from './content.js?v=03a6968a20';
-import { taleNoegle, ordStart, ORD_RE } from './tale.js?v=03a6968a20';
-import { sleep } from './util.js?v=03a6968a20';
+import { strakt, lydtype } from './content.js?v=6f70bf5933';
+import { taleNoegle, ordStart, ORD_RE } from './tale.js?v=6f70bf5933';
+import { sleep } from './util.js?v=6f70bf5933';
 
 export const events = new EventTarget(); // 'visual' { text } når en lyd vises i stedet for at blive afspillet
 let ctx = null;

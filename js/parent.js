@@ -1,10 +1,11 @@
 // Forældredelen: forældrespærren (hold 3 sek. + lille regnestykke), Trænerbænken, lydstudiet "Jeres egen stemme" (valgfrit),
 // loggen og nulstilling (bekræftes i siden, aldrig med confirm()).
-import { ALFABET, KLASSENS_17, HISTORIER, DAGENS_ORD_LYD, lydtype, kraevedeBogstaver } from './content.js?v=03a6968a20';
-import { state, save, reset, opslagInfo } from './store.js?v=03a6968a20';
-import { hasRec, playRec, delRec, saveRec, startRecording, clearRecs, setSound, hasLetterSound, hasLetterClip, hasClip, playLetter, say, claim } from './audio.js?v=03a6968a20';
-import { ICON, overlay, onClick, holdButton, ringSvg, bubble } from './ui.js?v=03a6968a20';
-import { $, $$, esc, shuffle, ri, clock } from './util.js?v=03a6968a20';
+import { ALFABET, KLASSENS_17, HISTORIER, DAGENS_ORD_LYD, lydtype, kraevedeBogstaver } from './content.js?v=6f70bf5933';
+import { state, save, reset, opslagInfo } from './store.js?v=6f70bf5933';
+import { hasRec, playRec, delRec, saveRec, startRecording, clearRecs, setSound, hasLetterSound, hasLetterClip, hasClip, playLetter, say, claim } from './audio.js?v=6f70bf5933';
+import { ICON, overlay, onClick, holdButton, ringSvg, bubble } from './ui.js?v=6f70bf5933';
+import { $, $$, esc, shuffle, ri, clock } from './util.js?v=6f70bf5933';
+import { TRIN_NAVN, GODE_FOR_NAESTE, MISS_FOR_NED, SAMME_LYD, skrivInfo } from './skriv.js?v=6f70bf5933';
 
 // ================= Forældrespærren =================
 
@@ -37,8 +38,11 @@ const ACT = {
   lydjagt: 'Lydjagt', 'hvilken-lyd': 'Hvilken lyd?', 'sig-selv': 'Sig det selv', 'nyt-saetning': 'Sove-ægget',
   'laes-vaelg': 'Læs og vælg', byg: 'Byg ordet', kommando: 'Kommando', tjek: 'Billedtjek', opslag: 'Opslag',
 };
-const RES = { rigtigt: 'rigtigt', forkert: 'forkert', hjaelp: 'med hjælp', selv: 'læst selv' };
+const RES = { rigtigt: 'rigtigt', forkert: 'forkert', hjaelp: 'med hjælp', selv: 'læst selv', igen: 'prøver igen' };
 ACT['bogstavnavn'] = 'Bogstavnavn';
+ACT.skriv = 'Skriv bogstavet';
+// Hvorfor et skriveforsøg ikke blev godkendt (genkend.js), sagt til den voksne
+const GRUND = { spejl: 'spejlvendt', 'for-lille': 'for lille', kruseduller: 'kruseduller', 'andet-bogstav': 'ligner et andet bogstav', 'ufuldstændig': 'ikke færdigt', ufuldstaendig: 'ikke færdigt', start: 'startede et andet sted', retning: 'anden retning', stort: 'stort bogstav', buer: 'forkert antal buer', utydelig: 'utydeligt' };
 
 // "R1-ti-ni-nu#6" → "Ti, ni … nu! · opslag 6"
 function itemLabel(item) {
@@ -48,7 +52,7 @@ function itemLabel(item) {
 }
 
 const TABS = [
-  ['bogstaver', 'Ugens bogstaver'], ['lyd', 'Jeres egen stemme'], ['indst', 'Indstillinger'], ['log', 'Log'], ['nulstil', 'Nulstil'],
+  ['bogstaver', 'Ugens bogstaver'], ['skriv', 'Hans bogstaver'], ['lyd', 'Jeres egen stemme'], ['indst', 'Indstillinger'], ['log', 'Log'], ['nulstil', 'Nulstil'],
 ];
 
 // Bip siger bogstavlydene med Jeppes stemme (public/lyd/bogstav/). Kortet vises kun, hvis en lyd hverken findes
@@ -80,7 +84,7 @@ export function renderBench(root, { onBack, tab = 'bogstaver' }) {
     onClick($('#go-lyd', root), () => { stopRecording(); draw('lyd'); });
     $$('.tab', root).forEach((b) => onClick(b, () => { stopRecording(); draw(b.dataset.tab); }));
     const body = $('#bench-body', root);
-    ({ bogstaver: letters, lyd: studio, indst: settings, log: logView, nulstil: resetView })[tab](body, draw);
+    ({ bogstaver: letters, skriv: hansBogstaver, lyd: studio, indst: settings, log: logView, nulstil: resetView })[tab](body, draw);
   };
   draw(tab);
 }
@@ -105,6 +109,48 @@ function letters(body) {
     }));
     onClick($('#alle', body), () => { state.letters = ALFABET.slice(); save(); draw(); });
     onClick($('#std17', body), () => { state.letters = KLASSENS_17.slice(); save(); draw(); });
+  };
+  draw();
+}
+
+// ---- Hans bogstaver: skrivning med fingeren (skriv.js) ----
+// De seneste 3 tegninger pr. bogstav som små SVG'er på skrivelinjerne, trinnet og indstillingen for streng skrivevej.
+// Punkterne er gemt i hundrededele af skrivehusets højde (y: 0 = toplinjen, 33 = x-linjen, 67 = grundlinjen, 100 = nedstregslinjen).
+export function tegningSvg(tegning) {
+  const pts = (tegning?.s || []).map((a) => { const P = []; for (let i = 0; i + 1 < a.length; i += 2) P.push([a[i], a[i + 1]]); return P; }).filter((P) => P.length);
+  const xs = pts.flat().map((p) => p[0]);
+  const x0 = xs.length ? Math.min(...xs) : 0, x1 = xs.length ? Math.max(...xs) : 30;
+  const pad = 12, w = Math.max(50, x1 - x0 + 2 * pad), vx = (x0 + x1) / 2 - w / 2;
+  const linje = (y, extra = '') => `<line x1="${vx}" x2="${vx + w}" y1="${y}" y2="${y}" ${extra}/>`;
+  const streg = (P) => (P.length === 1 ? `<circle cx="${P[0][0]}" cy="${P[0][1]}" r="3.5" fill="#3d5bd9"/>` : `<polyline points="${P.map((p) => p.join(',')).join(' ')}" fill="none" stroke="#3d5bd9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>`);
+  return `<svg class="tegning" viewBox="${vx} -6 ${w} 112" aria-hidden="true"><rect x="${vx}" y="33" width="${w}" height="34" fill="rgba(255,236,170,.35)"/>
+    <g stroke="#b9c3df" stroke-width="1.5">${linje(0)}${linje(33, 'stroke-dasharray="5 4"')}${linje(100)}</g>${linje(67, 'stroke="#6f86c6" stroke-width="2.5"')}
+    ${pts.map(streg).join('')}</svg>`;
+}
+
+const opremsning = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} og ${xs.at(-1)}`); // "c, z, q og w"
+
+function hansBogstaver(body) {
+  const draw = () => {
+    const s = state.settings;
+    const ls = ALFABET.filter((l) => { const i = skrivInfo(l); return i.n || i.vist; });
+    body.innerHTML = `<div class="card settings">
+      <h2>Hans bogstaver</h2>
+      <p class="muted">Han skriver små bogstaver med fingeren: i opvarmningen ("Skriv lyden") og fra bogstavkortet i omklædningsrummet. Trinene er <b>1 Spor</b> (stiplet bogstav) → <b>2 Startprik</b> → <b>3 Fra hukommelsen</b> (han hører kun lyden). ${GODE_FOR_NAESTE} gode forsøg på et trin flytter ham til næste trin, og lykkes det ikke ${MISS_FOR_NED} gange i træk, går han et trin ned. Tredje forsøg på trin 2 og 3 er altid et sporingsforsøg, så det lykkes til sidst. På trin 3 tæller et forsøg kun som godt fra hukommelsen, hvis han ikke lige har set bogstavet blive vist i omgangen (efter et forsøg, der ikke lykkedes, eller på "Se hvordan"): så får han ros, men omgangen tæller som en omgang uden held på trinnet (ligesom sporingsforsøget) og kan dermed føre til et trin ned. Bogstaverne ${opremsning(Object.keys(SAMME_LYD))} når højst trin 2, fordi de lyder som ${opremsning([...new Set(Object.values(SAMME_LYD))])}: lyden alene siger ikke, hvilket af bogstaverne han skal skrive. Skærmen erstatter ikke papiret: skriv også bogstaverne med blyant i logbogen.</p>
+      <div class="set-row"><div><b>Streng skrivevej (start og retning)</b><small>Fra: kun formen tæller, og Bip giver et lille tip om skrivevejen bagefter. Til: bogstavet skal også startes det rigtige sted og skrives den rigtige vej (oppefra og ned, runde bogstaver mod uret, prikker og tværstreger til sidst).</small></div>
+        <div class="seg" role="radiogroup" data-name="skrivStreng">${[[false, 'Fra'], [true, 'Til']].map(([v, l]) => `<button role="radio" class="seg-btn ${!!s.skrivStreng === v ? 'on' : ''}" data-v="${v}" aria-checked="${!!s.skrivStreng === v}">${l}</button>`).join('')}</div></div>
+    </div>
+    <div class="card">
+      ${ls.length ? `<div class="skriv-liste">${ls.map((l) => {
+        const i = skrivInfo(l);
+        return `<div class="skriv-raekke" data-l="${l}">
+          <span class="skriv-bogstav">${l}</span>
+          <span class="skriv-trin"><b>Trin ${i.trin}: ${TRIN_NAVN[i.trin]}</b><small>${i.trin >= i.maks && i.maks < 3 ? `${i.ok} ${i.ok === 1 ? 'godt forsøg' : 'gode forsøg'} · højeste trin (${l} lyder som ${SAMME_LYD[l]})` : i.trin < 3 ? `${i.ok} af ${GODE_FOR_NAESTE} gode forsøg` : i.ok ? `${i.ok} ${i.ok === 1 ? 'godt forsøg' : 'gode forsøg'} fra hukommelsen` : 'øver fra hukommelsen'} · ${i.n} forsøg i alt</small></span>
+          <span class="skriv-tegninger">${i.tegn.slice().reverse().map((t) => `<span class="skriv-tegning ${t.ok ? 'ok' : ''}" title="${esc(clock(t.t))} · trin ${t.trin}">${tegningSvg(t)}${t.ok ? `<span class="tg-ok" aria-label="godkendt">${ICON.check()}</span>` : `<small>${esc(GRUND[t.grund] || 'øvet')}</small>`}</span>`).join('')}</span>
+        </div>`;
+      }).join('')}</div>` : '<p class="muted">Ingen tegninger endnu. De kommer her, når han har skrevet et bogstav.</p>'}
+    </div>`;
+    $$('.seg-btn', body).forEach((b) => onClick(b, () => { s.skrivStreng = b.dataset.v === 'true'; save(); draw(); }));
   };
   draw();
 }
@@ -245,7 +291,7 @@ function logView(body) {
   <div class="card">
     <h2>Seneste ${scored.length || ''} scorede svar</h2>
     ${scored.length ? `<table class="log-table"><thead><tr><th>Tid</th><th>Aktivitet</th><th>Ord/bogstav</th><th>Svar</th></tr></thead><tbody>
-      ${scored.map((e) => `<tr><td>${esc(clock(e.t))}</td><td>${esc(ACT[e.act] || e.act)}</td><td>${esc(itemLabel(e.item))}${e.valgt ? ` <small>(valgte ${esc(e.valgt)})</small>` : ''}${e.efter_diktat ? ' <small>(efter diktat)</small>' : ''}${e.kilde === 'voksen' ? ' <small>(den voksne sagde lyden)</small>' : ''}</td><td class="res-${esc(e.res)}">${esc(RES[e.res] || e.res)}</td></tr>`).join('')}
+      ${scored.map((e) => `<tr><td>${esc(clock(e.t))}</td><td>${esc(ACT[e.act] || e.act)}</td><td>${esc(itemLabel(e.item))}${e.valgt ? ` <small>(valgte ${esc(e.valgt)})</small>` : ''}${e.efter_diktat ? ' <small>(efter diktat)</small>' : ''}${e.kilde === 'voksen' ? ' <small>(den voksne sagde lyden)</small>' : ''}${e.act === 'skriv' ? ` <small>(trin ${e.trin}${!e.ok && GRUND[e.grund] ? `, ${GRUND[e.grund]}` : ''}${e.spor ? ', sporet' : e.efterVis ? ', lige efter at have set det' : ''})</small>` : ''}</td><td class="res-${esc(e.res)}">${esc(RES[e.res] || e.res)}</td></tr>`).join('')}
     </tbody></table>` : '<p class="muted">Ingen svar endnu. Spil en mission, så kommer de her.</p>'}
   </div>`;
 }

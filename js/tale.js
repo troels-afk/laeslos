@@ -3,7 +3,7 @@
 // tools/lyd/katalog.json – listen over alle tekster, som tools/lyd/tts.py laver Jeppe-lydfiler til.
 // Ret en replik her, og kør derefter:  node tools/lyd/katalog.mjs && python3 tools/lyd/tts.py app
 // (kun nye eller ændrede tekster sendes til Azure).
-import { BOGSTAVNAVN } from './content.js?v=03a6968a20';
+import { BOGSTAVNAVN } from './content.js?v=6f70bf5933';
 
 export const TALE = {
   // Start, Dut, stederne
@@ -63,6 +63,34 @@ export const TALE = {
   traekDino: 'Træk Dino under ordene, kaptajn.',
   hvilkenLyd: 'Hvilken lyd siger den?',
   trykNaeste: 'Tryk på Næste.',
+
+  // Skriv bogstavet (skrivefeltet med fingeren). Trin 1: "Skriv oven i …" + "Start ved …".
+  // Trin 2: "Skriv det bogstav, der siger:" + bogstavlyden + "Start ved …". Trin 3: "Skriv det bogstav, der siger:" + lyden.
+  seHer: 'Se her.',
+  skrivOveni: 'Skriv oven i bogstavet med din finger.',
+  startPrik: 'Start ved den grønne prik.',
+  skrivSiger: 'Skriv det bogstav, der siger:',
+  nuDigSkriv: 'Nu dig!',
+  // Ros: "Flot!" + bogstavlyden ("Flot … mmm")
+  skrivRos: ['Flot!', 'Sådan!', 'Fint!'],
+  skrivSpejl: 'Næsten! Den vender den anden vej.',
+  skrivIgen: 'Prøv igen – se her.',
+  skrivStoerre: 'Skriv den lidt større. Se her.',
+  skrivMangler: 'Næsten! Der mangler lidt. Se her.',
+  skrivStart: 'Næsten! Start ved den grønne prik. Se her.',
+  skrivRetning: 'Næsten! Se, hvilken vej den går.',
+  skrivStartTom: 'Næsten! Se, hvor den starter.', // trin 3 (ingen grøn prik i feltet)
+  skrivStort: 'Det er det store bogstav. Skriv det lille. Se her.',
+  skrivBuer: 'Næsten! Se, hvor mange buer den har.',
+  skrivUtydelig: 'Næsten! Se her.',
+  // Efter "Flot!": et lille tip om skrivevejen eller størrelsen (godkendt, tæller ikke som et forsøg)
+  tipStart: 'Næste gang starter du ved den grønne prik. Se her.',
+  tipStartTom: 'Se, hvor den starter.', // trin 3 (ingen grøn prik i feltet)
+  tipRetning: 'Se lige, hvilken vej den går.',
+  tipMindre: 'Næste gang må den gerne være lidt mindre.',
+  logbog: 'Skriv det også i logbogen!', // papiret bevares: efter et bogstav fra hukommelsen (højst én gang om dagen)
+  viskUd: 'Visk ud.',
+  godtOevet: 'Godt øvet, kaptajn!',
 };
 
 // Skabeloner (katalog.mjs laver alle kombinationer)

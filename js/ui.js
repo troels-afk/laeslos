@@ -1,9 +1,9 @@
 // Fælles komponenter: SVG-ikoner (tegnet i kode, ingen emoji), billeder med pladsholder, Bip og hans taleboble,
 // trin-prikker, hold-knapper og overlays.
-import { ORDBOG, STEDER } from './content.js?v=03a6968a20';
-import { esc, sleep } from './util.js?v=03a6968a20';
-import { events, say, sfx, interrupt, speechGen } from './audio.js?v=03a6968a20';
-import { TALE } from './tale.js?v=03a6968a20';
+import { ORDBOG, STEDER } from './content.js?v=6f70bf5933';
+import { esc, sleep } from './util.js?v=6f70bf5933';
+import { events, say, sfx, interrupt, speechGen } from './audio.js?v=6f70bf5933';
+import { TALE } from './tale.js?v=6f70bf5933';
 
 const INK = '#2b2a33';
 const S = `stroke="${INK}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"`;
@@ -87,6 +87,14 @@ export const ICON = {
   stop: () => `<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="26" y="26" width="48" height="48" rx="8" fill="#ef6a4c" ${S}/></svg>`,
   play: () => `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M32 20 L80 50 L32 80Z" fill="#7cc35b" ${S}/></svg>`,
   slet: () => `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M24 30 h52 l-6 60 h-40z" fill="#e7e2f3" ${S}/><path d="M18 28 h64 M40 18 h20" ${S} stroke-width="5"/><path d="M42 44 v32 M58 44 v32" ${S}/></svg>`,
+  // Skriv: en gul blyant på skrå (Omklædningsrummets "Skriv" og "Skriv igen")
+  blyant: () => `<svg viewBox="0 0 100 100" aria-hidden="true"><g transform="rotate(40 50 50)">
+    <rect x="39" y="6" width="22" height="62" rx="3" fill="#ffd24a" ${S}/><path d="M50 6 v62" stroke="#e0a92a" stroke-width="3"/>
+    <rect x="39" y="6" width="22" height="13" rx="3" fill="#f4a8b8" ${S}/>
+    <path d="M39 68 L50 94 L61 68Z" fill="#f6cfa8" ${S}/><path d="M46 85 L50 94 L54 85Z" fill="${INK}"/></g></svg>`,
+  // Se hvordan: et øje (vis-hvordan-animationen)
+  oeje: () => `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M6 50 Q50 8 94 50 Q50 92 6 50Z" fill="#fff" ${S}/>
+    <circle cx="50" cy="50" r="17" fill="#f08a3c" ${S}/><circle cx="50" cy="50" r="7" fill="${INK}"/><circle cx="56" cy="44" r="3" fill="#fff"/></svg>`,
   check: () => `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 54 L42 76 L84 26" fill="none" stroke="${INK}" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   vaagn: () => `<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M10 70 h80" ${S} stroke-width="5"/><path d="M24 70 a26 26 0 0 1 52 0z" fill="#ffd24a" ${S}/>
     <path d="M50 30 v-14 M26 40 l-9 -9 M74 40 l9 -9" ${S} stroke-width="5"/></svg>`,

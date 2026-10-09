@@ -1,6 +1,6 @@
 // Indhold som data: bogstaver, billedordbogen, stederne på Dut, historierne og missionerne.
 // Historieteksterne kommer uændret fra koncept/eksempel-historier.json via tools/konverter_historier.mjs.
-import { HISTORIER, MISSIONER_JSON } from './historier.js?v=03a6968a20';
+import { HISTORIER, MISSIONER_JSON } from './historier.js?v=6f70bf5933';
 
 export { HISTORIER };
 
@@ -126,6 +126,8 @@ export const MISSIONER = {
       hvilkenLyd: { bogstav: 's', billeder: ['sol', 'bil', 'aeg'], rigtigt: 'sol' },
       sigSelv: 'l',
     },
+    // "Skriv lyden" efter Lydjagt: bogstaver fra historien, det første, der er slået til (skriv.js)
+    skriv: ['l'],
     nyt: {
       type: 'sove-aeg', ord: 'og',
       bip: 'Det her ord driller. o siger å, og g sover. Det siger: og.',
@@ -172,6 +174,7 @@ export const MISSIONER = {
       hvilkenLyd: { bogstav: 'i', billeder: ['is', 'sol', 'aeg'], rigtigt: 'is' },
       sigSelv: 'n',
     },
+    skriv: ['n'],
     nyt: null,
     dagensOrd: {
       glide: [
@@ -200,12 +203,15 @@ export const MISSIONER = {
     detalje: { id: 'r1-skilt', sted: 'rumbase', icon: 'nu-skilt', alt: 'Tavlen med nu ved rampen' },
   },
 };
+// "Skriv lyden" i læs sammen-historiernes opvarmning (bogstaver fra historien; det første, der er slået til)
+const SKRIV_JSON = { 'D2-tuba': ['m', 'æ'] };
 // Læs sammen-historiernes missioner står i JSON-filen (koncept/laes-sammen-historier.json → historier.js)
 for (const [id, m] of Object.entries(MISSIONER_JSON)) {
   MISSIONER[id] = {
     sted: m.sted, opvarmning: m.opvarmning, nyt: m.nyt, dagensOrd: m.dagensOrd,
     kommando: m.kommando || {}, tjek: m.tjek || {}, effekter: m.effekter || {}, detalje: m.detalje, lydstudieOrd: m.lydstudie_ord || [],
     skiltIBilledet: m.skilt_i_billedet || {}, // hvor skiltet står i billedet (procent), så kommandoordet kan stå PÅ det
+    skriv: m.skriv || SKRIV_JSON[id] || [],
   };
 }
 

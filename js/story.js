@@ -7,13 +7,13 @@
 // 2 linjer, når Jeppe har læst). Ordhjælp gives kun på barnets ord.
 // Regler: teksten står aldrig oven på billedet, billedet står stille og dæmpet, til sætningen er læst,
 // intet automatisk hint før 15 sek. uden aktivitet, og ingen auto-bladring.
-import { HISTORIER, MISSIONER, STEDER, DRILLEORD, tokens, antalBogstaver, billede, samtalekort, lydering, laesSammen } from './content.js?v=03a6968a20';
-import { state, log, markOpslag, save } from './store.js?v=03a6968a20';
-import { say, playLetter, playWord, sfx, sfxSeq, stopSpeech, claim } from './audio.js?v=03a6968a20';
-import { ICON, icon, pic, instruct, setInstruction, onTap, onClick, DEBUG, koeretoej } from './ui.js?v=03a6968a20';
-import { buildWord, choosePicture, waitClick, nextBtn } from './activities.js?v=03a6968a20';
-import { $, $$, esc, sleep, reducedMotion } from './util.js?v=03a6968a20';
-import { TALE, laesTraek, traek, vidsteDu, godtLaest, bekraeftTekst, vidsteDel } from './tale.js?v=03a6968a20';
+import { HISTORIER, MISSIONER, STEDER, DRILLEORD, tokens, antalBogstaver, billede, samtalekort, lydering, laesSammen } from './content.js?v=6f70bf5933';
+import { state, log, markOpslag, save } from './store.js?v=6f70bf5933';
+import { say, playLetter, playWord, sfx, sfxSeq, stopSpeech, claim } from './audio.js?v=6f70bf5933';
+import { ICON, icon, pic, instruct, setInstruction, onTap, onClick, DEBUG, koeretoej } from './ui.js?v=6f70bf5933';
+import { buildWord, choosePicture, waitClick, nextBtn } from './activities.js?v=6f70bf5933';
+import { $, $$, esc, sleep, reducedMotion } from './util.js?v=6f70bf5933';
+import { TALE, laesTraek, traek, vidsteDu, godtLaest, bekraeftTekst, vidsteDel } from './tale.js?v=6f70bf5933';
 
 const cur = (o) => { if (window.__ll) window.__ll.cur = o; };
 const hintMs = () => Number(window.__ll?.hintMs) || 15000; // testkrog: browsertesten kan forkorte hintets ventetid
